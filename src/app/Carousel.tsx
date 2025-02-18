@@ -21,7 +21,7 @@ export default function Carousel({ items }: CarouselProps) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col items-center">
       <div className="w-full flex justify-between items-center">
         <button onClick={handlePrev} className="p-2 bg-gray-700 text-white">
           Prev
