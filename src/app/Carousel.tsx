@@ -1,11 +1,16 @@
 "use client";
+
 import { useState } from "react";
 
 interface CarouselProps {
   items: React.ReactNode[];
+  transitionType?: "fade" | "slide";
 }
 
-export default function Carousel({ items }: CarouselProps) {
+export default function Carousel({
+  items,
+  transitionType = "slide",
+}: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -21,27 +26,43 @@ export default function Carousel({ items }: CarouselProps) {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-full flex justify-between items-center">
-        <button onClick={handlePrev} className="p-2 bg-gray-700 text-white">
-          Prev
-        </button>
-        <div className="w-3/4 overflow-x-scroll whitespace-nowrap">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`inline-block w-full transition-transform duration-300 ${
-                index === currentIndex ? "block" : "hidden"
-              }`}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-        <button onClick={handleNext} className="p-2 bg-gray-700 text-white">
-          Next
-        </button>
+    <div className="relative w-full h-[60vh] overflow-hidden">
+      <div className="absolute inset-0 flex transition-all duration-500">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 w-full h-full flex justify-center items-center transition-all duration-700"
+            style={{
+              opacity:
+                transitionType === "fade"
+                  ? index === currentIndex
+                    ? 1
+                    : 0
+                  : 1,
+              transform:
+                transitionType === "slide"
+                  ? `translateX(${(index - currentIndex) * 100}%)`
+                  : "none",
+              transition: "opacity 0.5s ease, transform 0.5s ease",
+            }}
+          >
+            {item}
+          </div>
+        ))}
       </div>
+
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white px-4 py-2 rounded-full"
+      >
+        ◀
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white px-4 py-2 rounded-full"
+      >
+        ▶
+      </button>
     </div>
   );
 }
