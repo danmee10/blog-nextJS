@@ -34,70 +34,66 @@ export default function Home() {
   ];
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h3>Projects</h3>
-        <Carousel items={carouselItems} />
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen px-8 py-12 gap-16 sm:px-20 font-geist-sans bg-gray-50 text-gray-900">
+      <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
+        <section className="w-full text-center sm:text-left">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Projects
+          </h3>
+          <div className="w-full max-w-2xl mx-auto">
+            <Carousel items={carouselItems} />
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <h3>Blog posts</h3>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="flex flex-col items-center">
-            <Image
-              src="/blog1.png"
-              alt="Blog Post 1"
-              width={100}
-              height={100}
-              className="mb-2"
-            />
-            <Link href="/blog/post1">Blog Post 1</Link>
+        <section className="w-full">
+          <h3 className="text-2xl font-semibold text-gray-800 text-center sm:text-left mb-4">
+            Blog Posts
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
+              >
+                <Image
+                  src={`/blog${i}.png`}
+                  alt={`Blog Post ${i}`}
+                  width={200}
+                  height={120}
+                  className="rounded-md mb-3"
+                />
+                <Link
+                  href={`/blog/post${i}`}
+                  className="text-lg font-medium text-blue-600 hover:underline"
+                >
+                  Blog Post {i}
+                </Link>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col items-center">
-            <Image
-              src="/blog2.png"
-              alt="Blog Post 2"
-              width={100}
-              height={100}
-              className="mb-2"
-            />
-            <Link href="/blog/post2">Blog Post 2</Link>
-          </div>
-          <div className="flex flex-col items-center">
-            <Image
-              src="/blog3.png"
-              alt="Blog Post 3"
-              width={100}
-              height={100}
-              className="mb-2"
-            />
-            <Link href="/blog/post3">Blog Post 3</Link>
-          </div>
-        </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <div className="flex flex-col items-center">
-          <h3>Contact Me</h3>
-          <p>Dan Mee</p>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/your-github-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/your-linkedin-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              LinkedIn
-            </a>
-          </div>
+
+      <footer className="row-start-3 flex flex-col items-center gap-4 text-center py-6">
+        <h3 className="text-xl font-semibold">Contact Me</h3>
+        <p className="text-gray-700">Dan Mee</p>
+        <div className="flex gap-6">
+          <a
+            href="https://github.com/your-github-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/your-linkedin-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            LinkedIn
+          </a>
         </div>
       </footer>
     </div>
