@@ -4,13 +4,9 @@ import { useState } from "react";
 
 interface CarouselProps {
   items: React.ReactNode[];
-  transitionType?: "fade" | "slide";
 }
 
-export default function Carousel({
-  items,
-  transitionType = "slide",
-}: CarouselProps) {
+export default function Carousel({ items }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -33,17 +29,8 @@ export default function Carousel({
             key={index}
             className="absolute inset-0 w-full h-full flex justify-center items-center transition-all duration-700"
             style={{
-              opacity:
-                transitionType === "fade"
-                  ? index === currentIndex
-                    ? 1
-                    : 0
-                  : 1,
-              transform:
-                transitionType === "slide"
-                  ? `translateX(${(index - currentIndex) * 100}%)`
-                  : "none",
-              transition: "opacity 0.5s ease, transform 0.5s ease",
+              transform: `translateX(${(index - currentIndex) * 100}%)`,
+              transition: "transform 0.5s ease",
             }}
           >
             {item}
