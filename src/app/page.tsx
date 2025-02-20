@@ -6,8 +6,10 @@ export default function Home() {
   const carouselItems = [
     <Image
       key="1"
-      height={500}
-      width={500}
+      height={0}
+      width={0}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto" }}
       className="dark:invert"
       src="/blog.png"
       alt="Tech Blog"
@@ -15,8 +17,10 @@ export default function Home() {
     />,
     <Image
       key="2"
-      height={500}
-      width={500}
+      height={0}
+      width={0}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto" }}
       className="dark:invert"
       src="/code-visualizer.png"
       alt="Code visualizer"
@@ -24,8 +28,10 @@ export default function Home() {
     />,
     <Image
       key="3"
-      height={500}
-      width={500}
+      height={0}
+      width={0}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto" }}
       className="dark:invert"
       src="/js-orm-sandbox.png"
       alt="JS ORM Sandbox"
@@ -34,7 +40,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen px-8 py-12 gap-16 sm:px-20 font-geist-sans bg-gray-50 text-gray-900">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans bg-gray-50 text-gray-900">
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
         <section className="w-full text-center sm:text-left">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -45,7 +51,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full">
+        <section className="w-full px-8 sm:px-20">
           <h3 className="text-2xl font-semibold text-gray-800 text-center sm:text-left mb-4">
             Blog Posts
           </h3>
