@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans bg-gray-50 text-gray-900">
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
-        <section className="w-full px-6 sm:px-12 lg:px-20 py-12 ">
+        <section className="w-full px-6 sm:px-12 lg:px-20 py-12 rounded-lg">
           <Banner />
         </section>
 
@@ -39,7 +39,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="row-start-3 flex flex-col gap-4 py-6 w-full justify-end">
+      <footer className="row-start-3 flex flex-col gap-4 py-6 pe-6 w-full justify-end bg-gray-900 text-white mt-10">
         <div className="ml-auto flex gap-2">
           <a
             href="https://github.com/danmee10"
@@ -48,7 +48,7 @@ export default function Home() {
             className="flex items-center justify-center"
           >
             <Image
-              src="/github-mark.png"
+              src="/github-mark-white.png"
               alt="GitHub"
               width={32}
               height={32}
@@ -62,7 +62,7 @@ export default function Home() {
             className="flex items-center justify-center"
           >
             <Image
-              src="/li-in-bug.png"
+              src="/InBug-White.png"
               alt="LinkedIn"
               width={32}
               height={32}
