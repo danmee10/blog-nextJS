@@ -20,13 +20,18 @@ export default function Home() {
                 key={i}
                 className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
               >
-                <Image
-                  src={`/blog${i}.jpg`}
-                  alt={`Blog Post ${i}`}
-                  width={200}
-                  height={120}
-                  className="rounded-md mb-3"
-                />
+                <Link
+                  href={`/blog/post${i}`}
+                  className="text-lg font-medium text-blue-600 hover:underline"
+                >
+                  <Image
+                    src={`/blog${i}.jpg`}
+                    alt={`Blog Post ${i}`}
+                    width={200}
+                    height={120}
+                    className="rounded-md mb-3"
+                  />
+                </Link>
                 <Link
                   href={`/blog/post${i}`}
                   className="text-lg font-medium text-blue-600 hover:underline"
