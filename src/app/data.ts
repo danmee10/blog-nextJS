@@ -94,99 +94,120 @@ export const blogPosts = [
 
 export const projects = [
   {
-    name: 'Real-Time Data Visualization Dashboard',
-    description: 'A dynamic dashboard that visualizes real-time data using WebSockets and D3.js.',
-    image: '/project1.jpg',
-    detailsLink: '/projects/data-visualization-dashboard',
-    demoLink: 'https://data-dashboard-demo.com',
-    sourceLink: 'https://github.com/danmee10/data-visualization-dashboard'
+    name: "Personal Blog / Portfolio Website",
+    description:
+      "A personal blog and portfolio website built with Next.js and Tailwind CSS.",
+    image: "/blog.jpg",
+    detailsLink: "/projects/blog",
+    demoLink: "https://sandboxDocs.com",
+    sourceLink: ["https://github.com/danmee10/blog-nextJS"],
   },
   {
-    name: 'AI-Powered Sentiment Analysis Tool',
-    description: 'An app that analyzes text sentiment using machine learning models to provide insights.',
-    image: '/project2.jpg',
-    detailsLink: '/projects/sentiment-analysis-tool',
-    demoLink: 'https://sentiment-analysis-tool-demo.com',
-    sourceLink: 'https://github.com/danmee10/sentiment-analysis-tool'
+    name: "Real-Time Data Visualization Dashboard",
+    description:
+      "A dynamic dashboard that visualizes real-time data using WebSockets and D3.js.",
+    image: "/project1.jpg",
+    detailsLink: "/projects/data-visualization-dashboard",
+    demoLink: "https://data-dashboard-demo.com",
+    sourceLink: ["https://github.com/danmee10/data-visualization-dashboard"],
   },
   {
-    name: 'Personal Finance Tracker',
-    description: 'An application to track your expenses, create budgets, and visualize spending habits.',
-    image: '/project3.jpg',
-    detailsLink: '/projects/personal-finance-tracker',
-    demoLink: 'https://finance-tracker-demo.com',
-    sourceLink: 'https://github.com/danmee10/personal-finance-tracker'
+    name: "AI-Powered Sentiment Analysis Tool",
+    description:
+      "An app that analyzes text sentiment using machine learning models to provide insights.",
+    image: "/project2.jpg",
+    detailsLink: "/projects/sentiment-analysis-tool",
+    demoLink: "https://sentiment-analysis-tool-demo.com",
+    sourceLink: ["https://github.com/danmee10/sentiment-analysis-tool"],
   },
   {
-    name: 'E-Commerce Platform with Custom CMS',
-    description: 'A fully functional e-commerce platform with an integrated content management system (CMS).',
-    image: '/project4.jpg',
-    detailsLink: '/projects/e-commerce-platform',
-    demoLink: 'https://e-commerce-platform-demo.com',
-    sourceLink: 'https://github.com/danmee10/e-commerce-platform'
+    name: "Personal Finance Tracker",
+    description:
+      "An application to track your expenses, create budgets, and visualize spending habits.",
+    image: "/project3.jpg",
+    detailsLink: "/projects/personal-finance-tracker",
+    demoLink: "https://finance-tracker-demo.com",
+    sourceLink: ["https://github.com/danmee10/personal-finance-tracker"],
   },
   {
-    name: 'Task Management App with Real-Time Collaboration',
-    description: 'A task management application that allows users to collaborate in real time on projects and tasks.',
-    image: '/project5.jpg',
-    detailsLink: '/projects/task-management-app',
-    demoLink: 'https://task-management-app-demo.com',
-    sourceLink: 'https://github.com/danmee10/task-management-app'
+    name: "E-Commerce Platform with Custom CMS",
+    description:
+      "A fully functional e-commerce platform with an integrated content management system (CMS).",
+    image: "/project4.jpg",
+    detailsLink: "/projects/e-commerce-platform",
+    demoLink: "https://e-commerce-platform-demo.com",
+    sourceLink: ["https://github.com/danmee10/e-commerce-platform"],
   },
   {
-    name: 'Weather Forecasting App',
-    description: 'A weather app that provides up-to-date weather forecasts and alerts based on user location.',
-    image: '/project6.jpg',
-    detailsLink: '/projects/weather-forecasting-app',
-    demoLink: 'https://weather-forecasting-app-demo.com',
-    sourceLink: 'https://github.com/danmee10/weather-forecasting-app'
+    name: "Task Management App with Real-Time Collaboration",
+    description:
+      "A task management application that allows users to collaborate in real time on projects and tasks.",
+    image: "/project5.jpg",
+    detailsLink: "/projects/task-management-app",
+    demoLink: "https://task-management-app-demo.com",
+    sourceLink: ["https://github.com/danmee10/task-management-app"],
   },
   {
-    name: 'Chatbot with Natural Language Processing',
-    description: 'A chatbot application powered by NLP to provide conversational support for various topics.',
-    image: '/project7.jpg',
-    detailsLink: '/projects/chatbot-nlp',
-    demoLink: 'https://chatbot-nlp-demo.com',
-    sourceLink: 'https://github.com/danmee10/chatbot-nlp'
+    name: "Weather Forecasting App",
+    description:
+      "A weather app that provides up-to-date weather forecasts and alerts based on user location.",
+    image: "/project6.jpg",
+    detailsLink: "/projects/weather-forecasting-app",
+    demoLink: "https://weather-forecasting-app-demo.com",
+    sourceLink: ["https://github.com/danmee10/weather-forecasting-app"],
   },
   {
-    name: 'Photo Editing Web App',
-    description: 'A web-based photo editor with basic tools for cropping, resizing, and adding filters.',
-    image: '/project8.jpg',
-    detailsLink: '/projects/photo-editing-web-app',
-    demoLink: 'https://photo-editing-web-app-demo.com',
-    sourceLink: 'https://github.com/danmee10/photo-editing-web-app'
+    name: "Chatbot with Natural Language Processing",
+    description:
+      "A chatbot application powered by NLP to provide conversational support for various topics.",
+    image: "/project7.jpg",
+    detailsLink: "/projects/chatbot-nlp",
+    demoLink: "https://chatbot-nlp-demo.com",
+    sourceLink: ["https://github.com/danmee10/chatbot-nlp"],
   },
   {
-    name: 'Real-Time Messaging Platform',
-    description: 'A real-time messaging app with support for text, images, and video chat.',
-    image: '/project9.jpg',
-    detailsLink: '/projects/real-time-messaging-platform',
-    demoLink: 'https://real-time-messaging-demo.com',
-    sourceLink: 'https://github.com/danmee10/real-time-messaging-platform'
+    name: "Photo Editing Web App",
+    description:
+      "A web-based photo editor with basic tools for cropping, resizing, and adding filters.",
+    image: "/project8.jpg",
+    detailsLink: "/projects/photo-editing-web-app",
+    demoLink: "https://photo-editing-web-app-demo.com",
+    sourceLink: ["https://github.com/danmee10/photo-editing-web-app"],
   },
   {
-    name: 'Travel Planning App',
-    description: 'An app that helps users plan and organize their trips with itinerary tracking and flight/hotel bookings.',
-    image: '/project10.jpg',
-    detailsLink: '/projects/travel-planning-app',
-    demoLink: 'https://travel-planning-app-demo.com',
-    sourceLink: 'https://github.com/danmee10/travel-planning-app'
+    name: "Real-Time Messaging Platform",
+    description:
+      "A real-time messaging app with support for text, images, and video chat.",
+    image: "/project9.jpg",
+    detailsLink: "/projects/real-time-messaging-platform",
+    demoLink: "https://real-time-messaging-demo.com",
+    sourceLink: ["https://github.com/danmee10/real-time-messaging-platform"],
   },
   {
-    name: 'Fitness Tracking App',
-    description: 'An app that tracks physical activities, workouts, and provides progress insights.',
-    image: '/project11.jpg',
-    detailsLink: '/projects/fitness-tracking-app',
-    demoLink: 'https://fitness-tracking-app-demo.com',
-    sourceLink: 'https://github.com/danmee10/fitness-tracking-app'
+    name: "Travel Planning App",
+    description:
+      "An app that helps users plan and organize their trips with itinerary tracking and flight/hotel bookings.",
+    image: "/project10.jpg",
+    detailsLink: "/projects/travel-planning-app",
+    demoLink: "https://travel-planning-app-demo.com",
+    sourceLink: ["https://github.com/danmee10/travel-planning-app"],
   },
   {
-    name: 'Automated Content Curation System',
-    description: 'A system that uses machine learning to curate relevant content from various sources for your blog.',
-    image: '/project12.jpg',
-    detailsLink: '/projects/content-curation-system',
-    demoLink: 'https://content-curation-demo.com',
-    sourceLink: 'https://github.com/danmee10/content-curation-system'
-  }
+    name: "Fitness Tracking App",
+    description:
+      "An app that tracks physical activities, workouts, and provides progress insights.",
+    image: "/project11.jpg",
+    detailsLink: "/projects/fitness-tracking-app",
+    demoLink: "https://fitness-tracking-app-demo.com",
+    sourceLink: ["https://github.com/danmee10/fitness-tracking-app"],
+  },
+  {
+    name: "Automated Content Curation System",
+    description:
+      "A system that uses machine learning to curate relevant content from various sources for your blog.",
+    image: "/project12.jpg",
+    detailsLink: "/projects/content-curation-system",
+    demoLink: "https://content-curation-demo.com",
+    sourceLink: ["https://github.com/danmee10/content-curation-system"],
+  },
 ];
