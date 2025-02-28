@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <nav className="flex justify-between items-center p-4 text-white">
       <div className="flex items-center">
         <Link href="/">
           <h1 className="text-2xl font-bold">Sandbox Docs</h1>

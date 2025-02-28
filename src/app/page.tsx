@@ -4,12 +4,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans bg-gray-50 text-gray-900">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans">
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
-        <Banner />
+        <section className="w-full px-6 sm:px-12 lg:px-20 py-12 ">
+          <Banner />
+        </section>
 
         <section className="w-full px-8 sm:px-20">
-          <h3 className="text-2xl font-semibold text-gray-800 text-center sm:text-left mb-4">
+          <h3 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">
             Blog Posts
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -37,25 +39,35 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="row-start-3 flex flex-col items-center gap-4 text-center py-6">
-        <h3 className="text-xl font-semibold">Contact Me</h3>
-        <p className="text-gray-700">Dan Mee</p>
-        <div className="flex gap-6">
+      <footer className="row-start-3 flex flex-col gap-4 py-6 w-full justify-end">
+        <div className="ml-auto flex gap-2">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/danmee10"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="flex items-center justify-center"
           >
-            GitHub
+            <Image
+              src="/github-mark.png"
+              alt="GitHub"
+              width={32}
+              height={32}
+              className="hover:opacity-75"
+            />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/in/daniel-mee-58442622/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="flex items-center justify-center"
           >
-            LinkedIn
+            <Image
+              src="/li-in-bug.png"
+              alt="LinkedIn"
+              width={32}
+              height={32}
+              className="hover:opacity-75"
+            />
           </a>
         </div>
       </footer>
