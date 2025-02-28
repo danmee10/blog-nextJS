@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Banner() {
+export default function FeaturedProjects() {
   return (
     <div className="max-w-6xl mx-auto">
       <h3 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">

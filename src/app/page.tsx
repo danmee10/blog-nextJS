@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "./Banner";
+import FeaturedProjects from "./FeaturedProjects";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-geist-sans bg-gray-50 text-gray-900">
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
         <section className="w-full px-6 sm:px-12 lg:px-20 py-12 rounded-lg">
-          <Banner />
+          <FeaturedProjects />
         </section>
 
         <section className="w-full px-8 sm:px-20">
