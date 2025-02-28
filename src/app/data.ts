@@ -100,7 +100,7 @@ export const projects = [
     image: "/blog.jpg",
     detailsLink: "/projects/blog",
     demoLink: "https://sandboxDocs.com",
-    sourceLink: ["https://github.com/danmee10/blog-nextJS"],
+    sourceLinks: ["https://github.com/danmee10/blog-nextJS"],
   },
   {
     name: "Real-Time Data Visualization Dashboard",
@@ -109,7 +109,7 @@ export const projects = [
     image: "/project1.jpg",
     detailsLink: "/projects/data-visualization-dashboard",
     demoLink: "https://data-dashboard-demo.com",
-    sourceLink: ["https://github.com/danmee10/data-visualization-dashboard"],
+    sourceLinks: ["https://github.com/danmee10/data-visualization-dashboard"],
   },
   {
     name: "AI-Powered Sentiment Analysis Tool",
@@ -118,7 +118,7 @@ export const projects = [
     image: "/project2.jpg",
     detailsLink: "/projects/sentiment-analysis-tool",
     demoLink: "https://sentiment-analysis-tool-demo.com",
-    sourceLink: ["https://github.com/danmee10/sentiment-analysis-tool"],
+    sourceLinks: ["https://github.com/danmee10/sentiment-analysis-tool"],
   },
   {
     name: "Personal Finance Tracker",
@@ -127,7 +127,7 @@ export const projects = [
     image: "/project3.jpg",
     detailsLink: "/projects/personal-finance-tracker",
     demoLink: "https://finance-tracker-demo.com",
-    sourceLink: ["https://github.com/danmee10/personal-finance-tracker"],
+    sourceLinks: ["https://github.com/danmee10/personal-finance-tracker"],
   },
   {
     name: "E-Commerce Platform with Custom CMS",
@@ -136,7 +136,7 @@ export const projects = [
     image: "/project4.jpg",
     detailsLink: "/projects/e-commerce-platform",
     demoLink: "https://e-commerce-platform-demo.com",
-    sourceLink: ["https://github.com/danmee10/e-commerce-platform"],
+    sourceLinks: ["https://github.com/danmee10/e-commerce-platform"],
   },
   {
     name: "Task Management App with Real-Time Collaboration",
@@ -145,7 +145,7 @@ export const projects = [
     image: "/project5.jpg",
     detailsLink: "/projects/task-management-app",
     demoLink: "https://task-management-app-demo.com",
-    sourceLink: ["https://github.com/danmee10/task-management-app"],
+    sourceLinks: ["https://github.com/danmee10/task-management-app"],
   },
   {
     name: "Weather Forecasting App",
@@ -154,7 +154,7 @@ export const projects = [
     image: "/project6.jpg",
     detailsLink: "/projects/weather-forecasting-app",
     demoLink: "https://weather-forecasting-app-demo.com",
-    sourceLink: ["https://github.com/danmee10/weather-forecasting-app"],
+    sourceLinks: ["https://github.com/danmee10/weather-forecasting-app"],
   },
   {
     name: "Chatbot with Natural Language Processing",
@@ -163,7 +163,7 @@ export const projects = [
     image: "/project7.jpg",
     detailsLink: "/projects/chatbot-nlp",
     demoLink: "https://chatbot-nlp-demo.com",
-    sourceLink: ["https://github.com/danmee10/chatbot-nlp"],
+    sourceLinks: ["https://github.com/danmee10/chatbot-nlp"],
   },
   {
     name: "Photo Editing Web App",
@@ -172,7 +172,7 @@ export const projects = [
     image: "/project8.jpg",
     detailsLink: "/projects/photo-editing-web-app",
     demoLink: "https://photo-editing-web-app-demo.com",
-    sourceLink: ["https://github.com/danmee10/photo-editing-web-app"],
+    sourceLinks: ["https://github.com/danmee10/photo-editing-web-app"],
   },
   {
     name: "Real-Time Messaging Platform",
@@ -181,7 +181,7 @@ export const projects = [
     image: "/project9.jpg",
     detailsLink: "/projects/real-time-messaging-platform",
     demoLink: "https://real-time-messaging-demo.com",
-    sourceLink: ["https://github.com/danmee10/real-time-messaging-platform"],
+    sourceLinks: ["https://github.com/danmee10/real-time-messaging-platform"],
   },
   {
     name: "Travel Planning App",
@@ -190,7 +190,7 @@ export const projects = [
     image: "/project10.jpg",
     detailsLink: "/projects/travel-planning-app",
     demoLink: "https://travel-planning-app-demo.com",
-    sourceLink: ["https://github.com/danmee10/travel-planning-app"],
+    sourceLinks: ["https://github.com/danmee10/travel-planning-app"],
   },
   {
     name: "Fitness Tracking App",
@@ -199,7 +199,7 @@ export const projects = [
     image: "/project11.jpg",
     detailsLink: "/projects/fitness-tracking-app",
     demoLink: "https://fitness-tracking-app-demo.com",
-    sourceLink: ["https://github.com/danmee10/fitness-tracking-app"],
+    sourceLinks: ["https://github.com/danmee10/fitness-tracking-app"],
   },
   {
     name: "Automated Content Curation System",
@@ -208,6 +208,6 @@ export const projects = [
     image: "/project12.jpg",
     detailsLink: "/projects/content-curation-system",
     demoLink: "https://content-curation-demo.com",
-    sourceLink: ["https://github.com/danmee10/content-curation-system"],
+    sourceLinks: ["https://github.com/danmee10/content-curation-system"],
   },
 ];
