@@ -1,11 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { blogPosts } from "./data";
+import { projects } from "./data";
 
 export default function FeaturedProjects() {
-  const featuredProjects = blogPosts
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
+  const featuredProjects = projects.sort(() => 0.5 - Math.random()).slice(0, 4);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -16,12 +14,12 @@ export default function FeaturedProjects() {
       <div className="w-full h-auto flex gap-4">
         <div className="w-1/2 h-[450px] relative">
           <Link
-            href={featuredProjects[0].link}
+            href={featuredProjects[0].detailsLink}
             className="text-lg font-medium text-blue-600 hover:underline"
           >
             <Image
               src={featuredProjects[0].image}
-              alt={featuredProjects[0].heading}
+              alt={featuredProjects[0].name}
               width={1408}
               height={768}
               className="object-cover rounded-lg shadow-md"
@@ -32,12 +30,12 @@ export default function FeaturedProjects() {
         <div className="w-1/2 flex flex-col gap-4">
           <div className="w-full h-1/2 relative">
             <Link
-              href={featuredProjects[1].link}
+              href={featuredProjects[1].detailsLink}
               className="text-lg font-medium text-blue-600 hover:underline"
             >
               <Image
                 src={featuredProjects[1].image}
-                alt={featuredProjects[1].heading}
+                alt={featuredProjects[1].name}
                 width={704}
                 height={396}
                 className="object-cover rounded-lg shadow-md"
@@ -48,12 +46,12 @@ export default function FeaturedProjects() {
           <div className="w-full h-1/2 flex gap-4">
             <div className="w-1/2 relative">
               <Link
-                href={featuredProjects[2].link}
+                href={featuredProjects[2].detailsLink}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 <Image
                   src={featuredProjects[2].image}
-                  alt={featuredProjects[2].heading}
+                  alt={featuredProjects[2].name}
                   width={352}
                   height={198}
                   className="object-cover rounded-lg shadow-md"
@@ -62,12 +60,12 @@ export default function FeaturedProjects() {
             </div>
             <div className="w-1/2 relative">
               <Link
-                href={featuredProjects[3].link}
+                href={featuredProjects[3].detailsLink}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 <Image
                   src={featuredProjects[3].image}
-                  alt={featuredProjects[3].heading}
+                  alt={featuredProjects[3].name}
                   width={352}
                   height={198}
                   className="object-cover rounded-lg shadow-md"
