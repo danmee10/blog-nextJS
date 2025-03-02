@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FeaturedProjects from "./FeaturedProjects";
-import Link from "next/link";
+import FeaturedBlogPosts from "./FeaturedBlogPosts";
 
 export default function Home() {
   return (
@@ -11,36 +11,7 @@ export default function Home() {
         </section>
 
         <section className="w-full px-8 sm:px-20">
-          <h3 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">
-            Blog Posts
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
-              >
-                <Link
-                  href={`/blog/post${i}`}
-                  className="text-lg font-medium text-blue-600 hover:underline"
-                >
-                  <Image
-                    src={`/blog${i}.jpg`}
-                    alt={`Blog Post ${i}`}
-                    width={200}
-                    height={120}
-                    className="rounded-md mb-3"
-                  />
-                </Link>
-                <Link
-                  href={`/blog/post${i}`}
-                  className="text-lg font-medium text-blue-600 hover:underline"
-                >
-                  Blog Post {i}
-                </Link>
-              </div>
-            ))}
-          </div>
+          <FeaturedBlogPosts />
         </section>
       </main>
 
