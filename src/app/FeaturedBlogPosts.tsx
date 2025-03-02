@@ -39,7 +39,9 @@ export default function FeaturedBlogPosts() {
                     className="rounded-md mb-3"
                   />
                 ) : (
-                  <TagDisplay tags={tags} />
+                  <div className="mb-3">
+                    <TagDisplay tags={tags} />
+                  </div>
                 )}
               </Link>
               <Link

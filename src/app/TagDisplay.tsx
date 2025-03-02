@@ -4,11 +4,11 @@ interface TagDisplayProps {
 
 export default function TagDisplay({ tags }: TagDisplayProps) {
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-wrap gap-2">
       {tags.map((tag) => (
         <span
           key={tag}
-          className="text-sm bg-gray-200 text-gray-800 px-2 py-1 rounded-lg"
+          className="text-xs font-medium text-gray-900 px-2.5 py-1 rounded-md bg-gray-100"
         >
           {tag}
         </span>
