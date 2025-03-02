@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "../shared/components/Button";
 import { Card } from "../shared/components/Card";
-import { List, Grid, AlignJustify } from "lucide-react";
+import { List, Grid, AlignJustify, Link } from "lucide-react";
 import { blogPosts } from "../data/blogPosts";
 
 export default function BlogPage() {
@@ -51,27 +51,29 @@ export default function BlogPage() {
 
       <div className="space-y-4">
         {filteredPosts.map((post) => (
-          <Card key={post.id} className="p-4">
-            {viewMode !== "condensed" && (
-              <h2 className="text-lg font-semibold">{post.heading}</h2>
-            )}
-            {viewMode === "verbose" && (
-              <p className="text-gray-600">{post.subHeading}</p>
-            )}
-            {viewMode === "standard" && (
-              <p className="text-gray-600">{post.heading}</p>
-            )}
-            <div className="flex flex-wrap gap-2 mt-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs bg-gray-100 text-gray-900 px-2 py-1 rounded-md"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </Card>
+          <Link key={post.id} href={`/blog/${post.id}`}>
+            <Card key={post.id} className="p-4">
+              {viewMode !== "condensed" && (
+                <h2 className="text-lg font-semibold">{post.heading}</h2>
+              )}
+              {viewMode === "verbose" && (
+                <p className="text-gray-600">{post.subHeading}</p>
+              )}
+              {viewMode === "standard" && (
+                <p className="text-gray-600">{post.heading}</p>
+              )}
+              <div className="flex flex-wrap gap-2 mt-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs bg-gray-100 text-gray-900 px-2 py-1 rounded-md"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
