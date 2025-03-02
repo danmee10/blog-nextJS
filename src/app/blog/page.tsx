@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Input } from "../shared/components/Input";
-import { Button } from "../shared/components/Button";
-import { Card } from "../shared/components/Card";
+import Input from "../shared/components/Input";
+import Button from "../shared/components/Button";
+import Card from "../shared/components/Card";
 import { List, Grid, AlignJustify } from "lucide-react";
 
 export default function BlogPage() {
