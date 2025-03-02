@@ -2,7 +2,7 @@ interface TagDisplayProps {
   tags: string[];
 }
 
-export default function TagDisplay({ tags }: TagDisplayProps) {
+export function TagDisplay({ tags }: TagDisplayProps) {
   return (
     <div className="flex flex-wrap gap-2">
       {tags.map((tag) => (

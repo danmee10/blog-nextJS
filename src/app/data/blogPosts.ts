@@ -1,4 +1,14 @@
-export const blogPosts = [
+export interface BlogPost {
+  id: number;
+  heading: string;
+  subHeading: string;
+  image: string;
+  link: string;
+  markdownPath: string;
+  tags: string[];
+}
+
+export const blogPosts: BlogPost[] = [
   {
     id: 1,
     heading: "Exploring the Future of Full-Stack JavaScript",
@@ -129,4 +139,3 @@ export const blogPosts = [
     tags: ["Next.js", "Static Site Generation", "Web Development"],
   },
 ];
-

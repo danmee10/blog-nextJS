@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "./data/projects";
 
-export default function FeaturedProjects() {
+export function FeaturedProjects() {
   const featuredProjects = projects.sort(() => 0.5 - Math.random()).slice(0, 4);
 
   return (
