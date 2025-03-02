@@ -6,6 +6,7 @@ export const blogPosts = [
     image: "/blog-posts/full-stack-javascript-future.jpg",
     link: "/blog/full-stack-javascript-future",
     markdownPath: "blog/full-stack-javascript-future.md",
+    tags: ["JavaScript", "Full-Stack", "Web Development"],
   },
   {
     heading: "Mastering React: Tips and Best Practices",
@@ -13,6 +14,7 @@ export const blogPosts = [
     image: "/blog-posts/mastering-react.jpg",
     link: "/blog/mastering-react",
     markdownPath: "blog/mastering-react.md",
+    tags: ["React", "JavaScript", "Web Development"],
   },
   {
     heading: "Building Serverless Applications with AWS",
@@ -21,6 +23,7 @@ export const blogPosts = [
     image: "/blog-posts/serverless-aws.jpg",
     link: "/blog/serverless-aws",
     markdownPath: "blog/serverless-aws.md",
+    tags: ["Serverless", "AWS", "Cloud Computing"],
   },
   {
     heading: "JavaScript Design Patterns Every Developer Should Know",
@@ -28,6 +31,7 @@ export const blogPosts = [
     image: "/blog-posts/js-design-patterns.jpg",
     link: "/blog/js-design-patterns",
     markdownPath: "blog/js-design-patterns.md",
+    tags: ["JavaScript", "Design Patterns", "Best Practices"],
   },
   {
     heading: "GraphQL vs REST: Which API is Right for You?",
@@ -36,6 +40,7 @@ export const blogPosts = [
     image: "/blog-posts/graphql-vs-rest.jpg",
     link: "/blog/graphql-vs-rest",
     markdownPath: "blog/graphql-vs-rest.md",
+    tags: ["GraphQL", "REST", "APIs"],
   },
   {
     heading: "Getting Started with TypeScript in a Node.js Project",
@@ -44,6 +49,7 @@ export const blogPosts = [
     image: "/blog-posts/starting-with-typescript-node.jpg",
     link: "/blog/starting-with-typescript-node",
     markdownPath: "blog/starting-with-typescript-node.md",
+    tags: ["TypeScript", "Node.js", "JavaScript"],
   },
   {
     heading: "Understanding the JavaScript Event Loop",
@@ -52,6 +58,7 @@ export const blogPosts = [
     image: "/blog-posts/javascript-event-loop.jpg",
     link: "/blog/javascript-event-loop",
     markdownPath: "blog/javascript-event-loop.md",
+    tags: ["JavaScript", "Event Loop", "Asynchronous Programming"],
   },
   {
     heading: "Best Practices for Writing Clean and Maintainable Code",
@@ -60,6 +67,7 @@ export const blogPosts = [
     image: "/blog-posts/clean-code-best-practices.jpg",
     link: "/blog/clean-code-best-practices",
     markdownPath: "blog/clean-code-best-practices.md",
+    tags: ["Best Practices", "Clean Code", "Software Development"],
   },
   {
     heading:
@@ -69,6 +77,7 @@ export const blogPosts = [
     image: "/blog-posts/ci-cd-explained.jpg",
     link: "/blog/ci-cd-explained",
     markdownPath: "blog/ci-cd-explained.md",
+    tags: ["CI/CD", "DevOps", "Software Development"],
   },
   {
     heading: "A Beginner’s Guide to Docker and Containers",
@@ -77,6 +86,7 @@ export const blogPosts = [
     image: "/blog-posts/docker-containers-guide.jpg",
     link: "/blog/docker-containers-guide",
     markdownPath: "blog/docker-containers-guide.md",
+    tags: ["Docker", "Containers", "DevOps"],
   },
   {
     heading: "Introduction to Machine Learning with TensorFlow.js",
@@ -85,6 +95,7 @@ export const blogPosts = [
     image: "/blog-posts/machine-learning-tensorflowjs.jpg",
     link: "/blog/machine-learning-tensorflowjs",
     markdownPath: "blog/machine-learning-tensorflowjs.md",
+    tags: ["Machine Learning", "TensorFlow.js", "JavaScript"],
   },
   {
     heading: "Optimizing Performance in React Applications",
@@ -93,6 +104,7 @@ export const blogPosts = [
     image: "/blog-posts/react-performance-optimization.jpg",
     link: "/blog/react-performance-optimization",
     markdownPath: "blog/react-performance-optimization.md",
+    tags: ["React", "Performance Optimization", "JavaScript"],
   },
   {
     heading: "Building and Deploying a Personal Blog with Next.js",
@@ -101,6 +113,7 @@ export const blogPosts = [
     image: "/blog-posts/building-nextjs-blog.jpg",
     link: "/blog/building-nextjs-blog",
     markdownPath: "blog/building-nextjs-blog.md",
+    tags: ["Next.js", "Static Site Generation", "Web Development"],
   },
 ];
 
