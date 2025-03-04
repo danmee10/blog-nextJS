@@ -10,7 +10,6 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ blogName: string }>;
 }) {
-  // const params = useParams<{ blogId: string }>();
   const { blogName } = await params;
   const blogPostData: BlogPost | undefined = blogPosts.find(
     (post) => post.name === blogName
