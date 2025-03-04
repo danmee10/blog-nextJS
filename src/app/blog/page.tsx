@@ -53,7 +53,7 @@ export default function BlogPage() {
       <div className="space-y-4">
         {filteredPosts.map((post) => (
           <Card key={post.id} className="p-4">
-            <Link key={post.id} href={`/blog/${post.id}`}>
+            <Link key={post.id} href={`/blog/${post.name}`}>
               {viewMode !== "condensed" && (
                 <h2 className="text-lg font-semibold">{post.heading}</h2>
               )}

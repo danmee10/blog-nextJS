@@ -3,11 +3,15 @@ import path from 'path';
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-import { BlogMarkdown } from "@/app/types/BlogMarkdown";
 
-const postsDirectory = path.join(process.cwd(), "../../blog-markdown");
+const postsDirectory = path.join(process.cwd(), "src/app/blog-markdown");
 
-export async function getSortedPostsData(name: string) {
+export interface PostData {
+  name: string;
+  contentHtml: string;
+}
+
+export async function getPostsDataByName(name: string) {
   // Get file names under /posts
   const fileContents = fs.readFileSync(`${postsDirectory}/${name}.md`, "utf8");
 
@@ -24,6 +28,5 @@ export async function getSortedPostsData(name: string) {
   return {
     name,
     contentHtml,
-    ...matterResult.data,
   };
 }
