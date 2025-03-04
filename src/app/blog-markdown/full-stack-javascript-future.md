@@ -1,3 +1,9 @@
+---
+id: 1
+title: 'Exploring the Future of Full-Stack JavaScript'
+date: '2025-03-03'
+---
+
 # Exploring the Future of Full-Stack JavaScript  
 ## A deep dive into the evolving landscape of JavaScript development  
 

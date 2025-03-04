@@ -1,3 +1,9 @@
+---
+id: 2
+title: 'Mastering React: Tips and Best Practices'
+date: '2025-03-03'
+---
+
 # Mastering React: Tips and Best Practices  
 ## How to take your React development skills to the next level  
 

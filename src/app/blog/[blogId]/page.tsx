@@ -1,21 +1,25 @@
 import fs from "fs";
 
 import React from "react";
-import { blogPosts } from "../../data/blogPosts";
+import { type BlogPost } from "@/app/data/blogPosts";
+import { getSortedPostsData } from "../../lib/utils/posts";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import path from "path";
 
-import { useParams } from "next/navigation";
-export default function BlogPostPage() {
-  const params = useParams<{ blogId: string }>();
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  // const params = useParams<{ blogId: string }>();
+  const allPostsData: BlogPost[] = await getSortedPostsData();
 
-  // Route -> /shop/[tag]/[item]
-  // URL -> /shop/shoes/nike-air-max-97
-  // `params` -> { tag: 'shoes', item: 'nike-air-max-97' }
-  console.log(params);
+  console.log({ params, allPostsData });
 
-  const blogPost = blogPosts.find((post) => post.id === Number(params.blogId));
+  const blogPost = allPostsData.find(
+    (post) => post.id === Number(params.blogId)
+  );
 
   let markdown = "";
   if (blogPost) {
@@ -43,4 +47,13 @@ export default function BlogPostPage() {
       <Markdown>{markdown}</Markdown>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
