@@ -1,17 +1,21 @@
+import fs from "fs";
+
 import React from "react";
-import { useRouter } from "next/router";
 import { blogPosts } from "../../data/blogPosts";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import fs from "fs";
 import path from "path";
 
+import { useParams } from "next/navigation";
 export default function BlogPostPage() {
-  const {
-    query: { blogId },
-  } = useRouter();
+  const params = useParams<{ blogId: string }>();
 
-  const blogPost = blogPosts.find((post) => post.id === Number(blogId));
+  // Route -> /shop/[tag]/[item]
+  // URL -> /shop/shoes/nike-air-max-97
+  // `params` -> { tag: 'shoes', item: 'nike-air-max-97' }
+  console.log(params);
+
+  const blogPost = blogPosts.find((post) => post.id === Number(params.blogId));
 
   let markdown = "";
   if (blogPost) {
@@ -22,7 +26,7 @@ export default function BlogPostPage() {
     markdown = fs.readFileSync(markdownPath, "utf8");
   }
 
-  if (!markdown) {
+  if (!blogPost || !markdown) {
     return <div>Blog post not found</div>;
   }
 

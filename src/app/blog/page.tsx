@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../shared/components/Button";
-import { Card } from "../shared/components/Card";
-import { List, Grid, AlignJustify, Link } from "lucide-react";
+import { Button } from "../lib/components/Button";
+import { Card } from "../lib/components/Card";
+import { List, Grid, AlignJustify } from "lucide-react";
 import { blogPosts } from "../data/blogPosts";
+import Link from "next/link";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState("standard");
@@ -51,8 +52,8 @@ export default function BlogPage() {
 
       <div className="space-y-4">
         {filteredPosts.map((post) => (
-          <Link key={post.id} href={`/blog/${post.id}`}>
-            <Card key={post.id} className="p-4">
+          <Card key={post.id} className="p-4">
+            <Link key={post.id} href={`/blog/${post.id}`}>
               {viewMode !== "condensed" && (
                 <h2 className="text-lg font-semibold">{post.heading}</h2>
               )}
@@ -72,8 +73,8 @@ export default function BlogPage() {
                   </span>
                 ))}
               </div>
-            </Card>
-          </Link>
+            </Link>
+          </Card>
         ))}
       </div>
     </div>
