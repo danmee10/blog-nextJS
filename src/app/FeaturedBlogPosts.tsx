@@ -17,17 +17,17 @@ export function FeaturedBlogPosts() {
         Blog Posts
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {featuredBlogPosts.map(({ id, heading, image, tags }) => {
+        {featuredBlogPosts.map(({ name, heading, image, tags }) => {
           const imagePath = path.join(process.cwd(), "public", image);
           const hasImage = fs.existsSync(imagePath);
 
           return (
             <div
-              key={id}
+              key={name}
               className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
             >
               <Link
-                href={`/blog/post?id=${id}`}
+                href={`/blog/${name}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 {hasImage ? (
@@ -45,7 +45,7 @@ export function FeaturedBlogPosts() {
                 )}
               </Link>
               <Link
-                href={`/blog/post?id=${id}`}
+                href={`/blog/${name}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 {heading}
