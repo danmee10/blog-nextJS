@@ -35,11 +35,8 @@ export async function getPostsDataByName(
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === FsFileNotFoundErrorCode) {
-      // File not found
-      console.log(`File not found: ${name}.md`);
       return null;
     } else {
-      // Other errors
       throw error;
     }
   }

@@ -1,34 +1,26 @@
 import React from "react";
-import Link from "next/link";
 import { type PostData } from "@/app/lib/utils/posts";
 import { getPostsDataByName } from "../../lib/utils/posts";
 import Image from "next/image";
 import { blogPosts, type BlogPost } from "@/app/data/blogPosts";
+import NotFound from "@/app/lib/components/NotFound";
+import { NotFoundObject } from "@/app/lib/types/NotFoundObject";
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ blogName: string }>;
-}) {
-  const { blogName } = await params;
+interface BlogPostPageProps {
+  params: Promise<{ postName: string }>;
+}
+
+export default async function BlogPostPage({ params: asyncParams }: BlogPostPageProps) {
+  const params = await asyncParams;
+  const { postName } = params;
   const blogPostData: BlogPost | undefined = blogPosts.find(
-    (post) => post.name === blogName
+    (post) => post.name === postName
   );
-  const blogPost: PostData | null = await getPostsDataByName(blogName);
+
+  const blogPost: PostData | null = await getPostsDataByName(postName);
 
   if (!blogPost || !blogPostData) {
-    return (
-      <div className="max-w-4xl mx-auto p-4 text-center">
-        <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
-        <p className="text-gray-600 mb-4">
-          Sorry, the blog post you are looking for does not exist or has been
-          removed.
-        </p>
-        <Link href="/blog" className="text-blue-600 hover:underline">
-          Go back to Blog
-        </Link>
-      </div>
-    );
+    return <NotFound objectType={NotFoundObject.POST} />;
   }
 
   return (
