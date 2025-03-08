@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="row-start-3 flex flex-col gap-4 py-6 pe-6 w-full justify-end bg-gray-900 text-white mt-10">
       <div className="ml-auto flex gap-2">
         <a
-          href="https://github.com/danmee10"
+          href="https://github.com/danmee10/blog-nextJS"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center"
