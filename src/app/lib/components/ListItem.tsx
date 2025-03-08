@@ -16,7 +16,7 @@ export const ListItem = ({ item, viewMode }: ListItemProps) => {
 
   return (
     <Card className="p-4 relative">
-      <Link key={item.id} href={`/blog/${item.slug}`}>
+      <Link key={item.id} href={`/${item.bucket}/${item.slug}`}>
         {viewMode === ListViewMode.VERBOSE && (
           <div className="relative mb-4">
             <Image

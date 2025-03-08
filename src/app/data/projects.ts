@@ -1,3 +1,4 @@
+import { ItemBucket } from "../lib/constants/ItemBucket";
 import { Project } from "../lib/types/Project";
 import { Tag } from "./tags";
 
@@ -12,6 +13,7 @@ export const projects: Project[] = [
     demoLink: "https://sandboxDocs.com",
     sourceLinks: ["https://github.com/danmee10/blog-nextJS"],
     tags: [Tag.NEXT_JS, Tag.TAILWIND_CSS, Tag.WEB_DEVELOPMENT],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const projects: Project[] = [
     slug: "code-visualizer",
     sourceLinks: ["https://github.com/danmee10/code-visualizer"],
     tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT, Tag.TOOLS],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 3,
@@ -32,6 +35,7 @@ export const projects: Project[] = [
     slug: "js-orm-sandbox",
     sourceLinks: ["https://github.com/danmee10/js-orm-sandbox"],
     tags: [Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.DEVTOOLS],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 4,
@@ -43,6 +47,7 @@ export const projects: Project[] = [
     demoLink: "https://data-dashboard-demo.com",
     sourceLinks: ["https://github.com/danmee10/data-visualization-dashboard"],
     tags: [Tag.JAVASCRIPT, Tag.D3_JS, Tag.WEBSOCKETS],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 5,
@@ -54,6 +59,7 @@ export const projects: Project[] = [
     demoLink: "https://sentiment-analysis-tool-demo.com",
     sourceLinks: ["https://github.com/danmee10/sentiment-analysis-tool"],
     tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.PYTHON],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 6,
@@ -65,6 +71,7 @@ export const projects: Project[] = [
     demoLink: "https://finance-tracker-demo.com",
     sourceLinks: ["https://github.com/danmee10/personal-finance-tracker"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FINTECH],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 7,
@@ -76,6 +83,7 @@ export const projects: Project[] = [
     demoLink: "https://e-commerce-platform-demo.com",
     sourceLinks: ["https://github.com/danmee10/e-commerce-platform"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.ECOMMERCE],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 8,
@@ -87,6 +95,7 @@ export const projects: Project[] = [
     demoLink: "https://task-management-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/task-management-app"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.COLLABORATION],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 9,
@@ -98,6 +107,7 @@ export const projects: Project[] = [
     demoLink: "https://weather-forecasting-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/weather-forecasting-app"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.WEATHER],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 10,
@@ -109,6 +119,7 @@ export const projects: Project[] = [
     demoLink: "https://chatbot-nlp-demo.com",
     sourceLinks: ["https://github.com/danmee10/chatbot-nlp"],
     tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.CHATBOT],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 11,
@@ -120,6 +131,7 @@ export const projects: Project[] = [
     demoLink: "https://photo-editing-web-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/photo-editing-web-app"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.PHOTO_EDITING],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 12,
@@ -131,6 +143,7 @@ export const projects: Project[] = [
     demoLink: "https://real-time-messaging-demo.com",
     sourceLinks: ["https://github.com/danmee10/real-time-messaging-platform"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.REAL_TIME],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 13,
@@ -142,6 +155,7 @@ export const projects: Project[] = [
     demoLink: "https://travel-planning-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/travel-planning-app"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.TRAVEL],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 14,
@@ -153,6 +167,7 @@ export const projects: Project[] = [
     demoLink: "https://fitness-tracking-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/fitness-tracking-app"],
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FITNESS],
+    bucket: ItemBucket.PROJECTS,
   },
   {
     id: 15,
@@ -164,5 +179,6 @@ export const projects: Project[] = [
     demoLink: "https://content-curation-demo.com",
     sourceLinks: ["https://github.com/danmee10/content-curation-system"],
     tags: [Tag.MACHINE_LEARNING, Tag.CONTENT_CURATION, Tag.BLOGGING],
+    bucket: ItemBucket.PROJECTS,
   },
 ];

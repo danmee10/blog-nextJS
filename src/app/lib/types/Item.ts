@@ -1,3 +1,5 @@
+import { ItemBucket } from "../constants/ItemBucket";
+
 export interface Item {
   id: number | string;
   name: string;
@@ -5,4 +7,5 @@ export interface Item {
   slug: string;
   tags: string[];
   image: string;
+  bucket: ItemBucket;
 }

@@ -1,3 +1,4 @@
+import { ItemBucket } from "../lib/constants/ItemBucket";
 import { Item } from "../lib/types/Item";
 
 export const blogPosts: Item[] = [
@@ -9,6 +10,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/full-stack-javascript-future.jpg",
     slug: "full-stack-javascript-future",
     tags: ["JavaScript", "Full-Stack", "Web Development"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 2,
@@ -17,6 +19,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/mastering-react.jpg",
     slug: "mastering-react",
     tags: ["React", "JavaScript", "Web Development"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 3,
@@ -26,6 +29,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/serverless-aws.jpg",
     slug: "serverless-aws",
     tags: ["Serverless", "AWS", "Cloud Computing"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/js-design-patterns.jpg",
     slug: "js-design-patterns",
     tags: ["JavaScript", "Design Patterns", "Best Practices"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 5,
@@ -43,6 +48,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/graphql-vs-rest.jpg",
     slug: "graphql-vs-rest",
     tags: ["GraphQL", "REST", "APIs"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 6,
@@ -52,6 +58,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/starting-with-typescript-node.jpg",
     slug: "starting-with-typescript-node",
     tags: ["TypeScript", "Node.js", "JavaScript"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 7,
@@ -61,6 +68,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/javascript-event-loop.png",
     slug: "javascript-event-loop",
     tags: ["JavaScript", "Event Loop", "Asynchronous Programming"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 8,
@@ -70,6 +78,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/clean-code-best-practices.jpg",
     slug: "clean-code-best-practices",
     tags: ["Best Practices", "Clean Code", "Software Development"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 9,
@@ -79,6 +88,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/ci-cd-explained.jpg",
     slug: "ci-cd-explained",
     tags: ["CI/CD", "DevOps", "Software Development"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 10,
@@ -88,6 +98,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/docker-containers-guide.jpg",
     slug: "docker-containers-guide",
     tags: ["Docker", "Containers", "DevOps"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 11,
@@ -97,6 +108,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/machine-learning-tensorflowjs.jpg",
     slug: "machine-learning-tensorflowjs",
     tags: ["Machine Learning", "TensorFlow.js", "JavaScript"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 12,
@@ -106,6 +118,7 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/react-performance-optimization.jpg",
     slug: "react-performance-optimization",
     tags: ["React", "Performance Optimization", "JavaScript"],
+    bucket: ItemBucket.BLOG_POST,
   },
   {
     id: 13,
@@ -115,5 +128,6 @@ export const blogPosts: Item[] = [
     image: "/blog-posts/building-nextjs-blog.jpg",
     slug: "building-nextjs-blog",
     tags: ["Next.js", "Static Site Generation", "Web Development"],
+    bucket: ItemBucket.BLOG_POST,
   },
 ];

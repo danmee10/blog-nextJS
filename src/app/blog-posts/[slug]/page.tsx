@@ -1,23 +1,27 @@
 import React from "react";
-import { type PostData } from "@/app/lib/utils/posts";
-import { getPostsDataByName } from "../../lib/utils/posts";
+import { type PostData } from "@/app/lib/utils/getItemDataByName";
+import { getItemDataByName } from "../../lib/utils/getItemDataByName";
 import Image from "next/image";
-import { blogPosts, type BlogPost } from "@/app/data/blogPosts";
+import { blogPosts } from "@/app/data/blogPosts";
 import NotFound from "@/app/lib/components/NotFound";
 import { NotFoundObject } from "@/app/lib/types/NotFoundObject";
+import { Item } from "@/app/lib/types/Item";
+import path from "path";
+
+const postsDirectory = path.join(process.cwd(), "src/app/blog-markdown");
 
 interface BlogPostPageProps {
-  params: Promise<{ postName: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export default async function BlogPostPage({ params: asyncParams }: BlogPostPageProps) {
   const params = await asyncParams;
-  const { postName } = params;
-  const blogPostData: BlogPost | undefined = blogPosts.find(
-    (post) => post.slug === postName
+  const { slug } = params;
+  const blogPostData: Item | undefined = blogPosts.find(
+    (post) => post.slug === slug
   );
 
-  const blogPost: PostData | null = await getPostsDataByName(postName);
+  const blogPost: PostData | null = await getItemDataByName({name: slug, dir: postsDirectory});
 
   if (!blogPost || !blogPostData) {
     return <NotFound objectType={NotFoundObject.POST} />;

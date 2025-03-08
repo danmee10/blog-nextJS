@@ -1,10 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-
-const postsDirectory = path.join(process.cwd(), "src/app/blog-markdown");
 
 export interface PostData {
   name: string;
@@ -13,12 +10,16 @@ export interface PostData {
 
 const FsFileNotFoundErrorCode = "ENOENT";
 
-export async function getPostsDataByName(
-  name: string
-): Promise<PostData | null> {
+export async function getItemDataByName({
+  name,
+  dir,
+}: {
+  name: string;
+  dir: string;
+}): Promise<PostData | null> {
   try {
     const fileContents = fs.readFileSync(
-      `${postsDirectory}/${name}.md`,
+      `${dir}/${name}.md`,
       "utf8"
     );
 

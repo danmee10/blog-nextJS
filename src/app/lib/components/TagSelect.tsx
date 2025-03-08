@@ -51,7 +51,7 @@ export const TagSelect = ({
         <div className="mt-2 grid grid-cols-2 gap-2 text-sm">
           {Object.entries(tagCategories).map(([category, tags]) => (
             <div key={category}>
-              <p className="font-medium text-gray-700">{category}</p>
+              <p className="font-semibold text-gray-900 text-lg">{category}</p>
               <div className="flex flex-wrap gap-2 mt-1">
                 {tags.map((tag) => (
                   <button
