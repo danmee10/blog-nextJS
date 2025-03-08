@@ -1,7 +1,7 @@
 import React from "react";
 import { ListPageLayout } from "../lib/components/ListPageLayout";
 
-const BlogLayout = ({
+const ProjectsLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -9,4 +9,4 @@ const BlogLayout = ({
   return <ListPageLayout>{children}</ListPageLayout>;
 };
 
-export default BlogLayout;
+export default ProjectsLayout;
