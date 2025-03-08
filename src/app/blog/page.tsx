@@ -5,10 +5,9 @@ import { blogPosts } from "../data/blogPosts";
 import { SearchBar } from "../lib/components/SearchBar";
 import { ListViewMode } from "../lib/types/ListViewMode";
 import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
-import { PostListItem } from "./PostListItem";
+import { ListItem } from "../lib/components/ListItem";
 import { TagSelect } from "../lib/components/TagSelect";
 import { Tag } from "../data/tags";
-import { Breadcrumbs } from "../lib/components/Breadcrumbs";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
@@ -54,7 +53,7 @@ export default function BlogPage() {
         }`}
       >
         {filteredPosts.map((post) => (
-          <PostListItem key={post.id} post={post} viewMode={viewMode} />
+          <ListItem key={post.id} item={post} viewMode={viewMode} />
         ))}
       </div>
     </div>

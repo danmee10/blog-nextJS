@@ -4,6 +4,18 @@ export enum TagCategory {
   CLOUD_DEVOPS = "Cloud & DevOps",
   SOFTWARE_ENGINEERING = "Software Engineering",
   PERFORMANCE_ML = "Performance & ML",
+  TOOLS = "Tools",
+  FINTECH = "Fintech",
+  ECOMMERCE = "E-commerce",
+  COLLABORATION = "Collaboration",
+  WEATHER = "Weather",
+  CHATBOT = "Chatbot",
+  PHOTO_EDITING = "Photo Editing",
+  REAL_TIME = "Real-Time",
+  TRAVEL = "Travel",
+  FITNESS = "Fitness",
+  CONTENT_CURATION = "Content Curation",
+  BLOGGING = "Blogging",
 }
 
 export enum Tag {
@@ -33,6 +45,24 @@ export enum Tag {
   MACHINE_LEARNING = "Machine Learning",
   TENSORFLOW_JS = "TensorFlow.js",
   STATIC_SITE_GENERATION = "Static Site Generation",
+  TAILWIND_CSS = "Tailwind CSS",
+  TOOLS = "Tools",
+  FINTECH = "Fintech",
+  ECOMMERCE = "E-commerce",
+  COLLABORATION = "Collaboration",
+  WEATHER = "Weather",
+  NLP = "NLP",
+  CHATBOT = "Chatbot",
+  PHOTO_EDITING = "Photo Editing",
+  REAL_TIME = "Real-Time",
+  TRAVEL = "Travel",
+  FITNESS = "Fitness",
+  CONTENT_CURATION = "Content Curation",
+  BLOGGING = "Blogging",
+  PYTHON = "Python",
+  D3_JS = "D3.js",
+  WEBSOCKETS = "WebSockets",
+  DEVTOOLS = "DevTools",
 }
 
 export const tagCategories: Record<TagCategory, Tag[]> = {
@@ -42,6 +72,7 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.NEXT_JS,
     Tag.TYPESCRIPT,
     Tag.WEB_DEVELOPMENT,
+    Tag.TAILWIND_CSS,
   ],
   [TagCategory.BACKEND]: [
     Tag.NODE_JS,
@@ -72,6 +103,18 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.TENSORFLOW_JS,
     Tag.STATIC_SITE_GENERATION,
   ],
+  [TagCategory.TOOLS]: [Tag.TOOLS, Tag.DEVTOOLS],
+  [TagCategory.FINTECH]: [Tag.FINTECH],
+  [TagCategory.ECOMMERCE]: [Tag.ECOMMERCE],
+  [TagCategory.COLLABORATION]: [Tag.COLLABORATION],
+  [TagCategory.WEATHER]: [Tag.WEATHER],
+  [TagCategory.CHATBOT]: [Tag.CHATBOT, Tag.NLP],
+  [TagCategory.PHOTO_EDITING]: [Tag.PHOTO_EDITING],
+  [TagCategory.REAL_TIME]: [Tag.REAL_TIME, Tag.WEBSOCKETS],
+  [TagCategory.TRAVEL]: [Tag.TRAVEL],
+  [TagCategory.FITNESS]: [Tag.FITNESS],
+  [TagCategory.CONTENT_CURATION]: [Tag.CONTENT_CURATION],
+  [TagCategory.BLOGGING]: [Tag.BLOGGING],
 };
 
 export const tags = Object.entries(tagCategories).reduce((acc, [category, tags]) => {

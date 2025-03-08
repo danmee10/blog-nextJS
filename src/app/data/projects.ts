@@ -1,3 +1,15 @@
+import { Tag } from "./tags";
+
+export interface Project {
+  name: string;
+  description: string;
+  image: string;
+  detailsLink: string;
+  demoLink?: string;
+  sourceLinks: string[];
+  tags: Tag[];
+}
+
 export const projects = [
   {
     name: "Personal Blog / Portfolio Website",
@@ -7,6 +19,7 @@ export const projects = [
     detailsLink: "/projects/blog",
     demoLink: "https://sandboxDocs.com",
     sourceLinks: ["https://github.com/danmee10/blog-nextJS"],
+    tags: [Tag.NEXT_JS, Tag.TAILWIND_CSS, Tag.WEB_DEVELOPMENT],
   },
   {
     name: "Code Visualizer",
@@ -15,6 +28,7 @@ export const projects = [
     image: "/projects/code-visualizer.jpg",
     detailsLink: "/projects/code-visualizer",
     sourceLinks: ["https://github.com/danmee10/code-visualizer"],
+    tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT, Tag.TOOLS],
   },
   {
     name: "JS ORM Sandbox",
@@ -23,6 +37,7 @@ export const projects = [
     image: "/projects/js-orm-sandbox.jpg",
     detailsLink: "/projects/js-orm-sandbox",
     sourceLinks: ["https://github.com/danmee10/js-orm-sandbox"],
+    tags: [Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.DEVTOOLS],
   },
   {
     name: "Real-Time Data Visualization Dashboard",
@@ -32,6 +47,7 @@ export const projects = [
     detailsLink: "/projects/data-visualization-dashboard",
     demoLink: "https://data-dashboard-demo.com",
     sourceLinks: ["https://github.com/danmee10/data-visualization-dashboard"],
+    tags: [Tag.JAVASCRIPT, Tag.D3_JS, Tag.WEBSOCKETS],
   },
   {
     name: "AI-Powered Sentiment Analysis Tool",
@@ -41,6 +57,7 @@ export const projects = [
     detailsLink: "/projects/sentiment-analysis-tool",
     demoLink: "https://sentiment-analysis-tool-demo.com",
     sourceLinks: ["https://github.com/danmee10/sentiment-analysis-tool"],
+    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.PYTHON],
   },
   {
     name: "Personal Finance Tracker",
@@ -50,6 +67,7 @@ export const projects = [
     detailsLink: "/projects/personal-finance-tracker",
     demoLink: "https://finance-tracker-demo.com",
     sourceLinks: ["https://github.com/danmee10/personal-finance-tracker"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FINTECH],
   },
   {
     name: "E-Commerce Platform with Custom CMS",
@@ -59,6 +77,7 @@ export const projects = [
     detailsLink: "/projects/e-commerce-platform",
     demoLink: "https://e-commerce-platform-demo.com",
     sourceLinks: ["https://github.com/danmee10/e-commerce-platform"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.ECOMMERCE],
   },
   {
     name: "Task Management App with Real-Time Collaboration",
@@ -68,6 +87,7 @@ export const projects = [
     detailsLink: "/projects/task-management-app",
     demoLink: "https://task-management-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/task-management-app"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.COLLABORATION],
   },
   {
     name: "Weather Forecasting App",
@@ -77,6 +97,7 @@ export const projects = [
     detailsLink: "/projects/weather-forecasting-app",
     demoLink: "https://weather-forecasting-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/weather-forecasting-app"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.WEATHER],
   },
   {
     name: "Chatbot with Natural Language Processing",
@@ -86,6 +107,7 @@ export const projects = [
     detailsLink: "/projects/chatbot-nlp",
     demoLink: "https://chatbot-nlp-demo.com",
     sourceLinks: ["https://github.com/danmee10/chatbot-nlp"],
+    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.CHATBOT],
   },
   {
     name: "Photo Editing Web App",
@@ -95,6 +117,7 @@ export const projects = [
     detailsLink: "/projects/photo-editing-web-app",
     demoLink: "https://photo-editing-web-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/photo-editing-web-app"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.PHOTO_EDITING],
   },
   {
     name: "Real-Time Messaging Platform",
@@ -104,6 +127,7 @@ export const projects = [
     detailsLink: "/projects/real-time-messaging-platform",
     demoLink: "https://real-time-messaging-demo.com",
     sourceLinks: ["https://github.com/danmee10/real-time-messaging-platform"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.REAL_TIME],
   },
   {
     name: "Travel Planning App",
@@ -113,6 +137,7 @@ export const projects = [
     detailsLink: "/projects/travel-planning-app",
     demoLink: "https://travel-planning-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/travel-planning-app"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.TRAVEL],
   },
   {
     name: "Fitness Tracking App",
@@ -122,6 +147,7 @@ export const projects = [
     detailsLink: "/projects/fitness-tracking-app",
     demoLink: "https://fitness-tracking-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/fitness-tracking-app"],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FITNESS],
   },
   {
     name: "Automated Content Curation System",
@@ -131,5 +157,6 @@ export const projects = [
     detailsLink: "/projects/content-curation-system",
     demoLink: "https://content-curation-demo.com",
     sourceLinks: ["https://github.com/danmee10/content-curation-system"],
+    tags: [Tag.MACHINE_LEARNING, Tag.CONTENT_CURATION, Tag.BLOGGING],
   },
 ];

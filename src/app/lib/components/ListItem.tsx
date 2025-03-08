@@ -1,50 +1,57 @@
 import Link from "next/link";
-import { Card } from "../lib/components/Card";
-import { ListViewMode } from "../lib/types/ListViewMode";
-import { BlogPost } from "../data/blogPosts";
+import { Card } from "./Card";
+import { ListViewMode } from "../types/ListViewMode";
 import Image from "next/image";
-import { TagDisplay } from "../TagDisplay";
+import { TagDisplay } from "../../TagDisplay";
 import { useState } from "react";
 
-interface PostListItemProps {
-  post: BlogPost;
+export interface Item {
+  id: number | string;
+  heading: string;
+  subHeading: string;
+  tags: string[];
+  image: string;
+}
+
+interface ListItemProps {
+  item: Item;
   viewMode: ListViewMode;
 }
 
-export const PostListItem = ({ post, viewMode }: PostListItemProps) => {
+export const ListItem = ({ item, viewMode }: ListItemProps) => {
   const [imageError, setImageError] = useState(false);
 
   return (
     <Card className="p-4 relative">
-      <Link key={post.id} href={`/blog/${post.name}`}>
+      <Link key={item.id} href={`/blog/${item.name}`}>
         {viewMode === ListViewMode.VERBOSE && (
           <div className="relative mb-4">
             <Image
               src={
-                imageError || !post.image ? "/fallback-image.jpg" : post.image
+                imageError || !item.image ? "/fallback-image.jpg" : item.image
               }
-              alt={post.heading}
+              alt={item.heading}
               className="w-full h-48 object-cover rounded-md"
               width={200}
               height={120}
               onError={() => setImageError(true)}
             />
             <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
-              {post.heading}
+              {item.heading}
             </h2>
           </div>
         )}
 
         {viewMode !== ListViewMode.VERBOSE && (
-          <h2 className="text-lg font-semibold">{post.heading}</h2>
+          <h2 className="text-lg font-semibold">{item.heading}</h2>
         )}
 
         {viewMode === ListViewMode.VERBOSE && (
-          <p className="text-gray-600">{post.subHeading}</p>
+          <p className="text-gray-600">{item.subHeading}</p>
         )}
 
         <div className="flex flex-wrap gap-2 mt-2">
-          <TagDisplay tags={post.tags} />
+          <TagDisplay tags={item.tags} />
         </div>
       </Link>
     </Card>
