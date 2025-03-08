@@ -14,7 +14,6 @@ export default function BlogPage() {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  console.log({ selectedTags });
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearchTerm =
       post.heading.toLowerCase().includes(search.toLowerCase()) ||
