@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Card } from "../lib/components/Card";
 import { ListViewMode } from "../lib/types/ListViewMode";
