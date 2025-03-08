@@ -8,6 +8,10 @@ import path from "path";
 
 export function FeaturedBlogPosts() {
   const featuredBlogPosts = blogPosts
+    .filter(({ image }) => {
+      const imagePath = path.join(process.cwd(), "public", image);
+      return fs.existsSync(imagePath);
+    })
     .sort(() => 0.5 - Math.random())
     .slice(0, 3);
 
@@ -17,10 +21,7 @@ export function FeaturedBlogPosts() {
         Blog Posts
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {featuredBlogPosts.map(({ name, heading, image, tags }) => {
-          const imagePath = path.join(process.cwd(), "public", image);
-          const hasImage = fs.existsSync(imagePath);
-
+        {featuredBlogPosts.map(({ name, heading, image }) => {
           return (
             <div
               key={name}
@@ -30,19 +31,13 @@ export function FeaturedBlogPosts() {
                 href={`/blog/${name}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
-                {hasImage ? (
-                  <Image
-                    src={image}
-                    alt={heading}
-                    width={200}
-                    height={120}
-                    className="rounded-md mb-3"
-                  />
-                ) : (
-                  <div className="mb-3">
-                    <TagDisplay tags={tags} />
-                  </div>
-                )}
+                <Image
+                  src={image}
+                  alt={heading}
+                  width={200}
+                  height={120}
+                  className="rounded-md mb-3"
+                />
               </Link>
               <Link
                 href={`/blog/${name}`}
