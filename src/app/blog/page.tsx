@@ -8,6 +8,7 @@ import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { PostListItem } from "./PostListItem";
 import { TagSelect } from "../lib/components/TagSelect";
 import { Tag } from "../data/tags";
+import { Breadcrumbs } from "../lib/components/Breadcrumbs";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
