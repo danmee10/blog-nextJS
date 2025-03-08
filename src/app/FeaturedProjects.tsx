@@ -17,13 +17,18 @@ export function FeaturedProjects() {
             href={featuredProjects[0].detailsLink}
             className="text-lg font-medium text-blue-600 hover:underline"
           >
-            <Image
-              src={featuredProjects[0].image}
-              alt={featuredProjects[0].name}
-              width={1408}
-              height={768}
-              className="object-cover rounded-lg shadow-md"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={featuredProjects[0].image}
+                alt={featuredProjects[0].name}
+                width={1408}
+                height={768}
+                className="object-cover rounded-lg shadow-md"
+              />
+              <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+                {featuredProjects[0].name}
+              </h2>
+            </div>
           </Link>
         </div>
 
@@ -33,13 +38,18 @@ export function FeaturedProjects() {
               href={featuredProjects[1].detailsLink}
               className="text-lg font-medium text-blue-600 hover:underline"
             >
-              <Image
-                src={featuredProjects[1].image}
-                alt={featuredProjects[1].name}
-                width={704}
-                height={396}
-                className="object-cover rounded-lg shadow-md"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={featuredProjects[1].image}
+                  alt={featuredProjects[1].name}
+                  width={704}
+                  height={396}
+                  className="object-cover rounded-lg shadow-md"
+                />
+                <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+                  {featuredProjects[1].name}
+                </h2>
+              </div>
             </Link>
           </div>
 
@@ -49,13 +59,18 @@ export function FeaturedProjects() {
                 href={featuredProjects[2].detailsLink}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
-                <Image
-                  src={featuredProjects[2].image}
-                  alt={featuredProjects[2].name}
-                  width={352}
-                  height={198}
-                  className="object-cover rounded-lg shadow-md"
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src={featuredProjects[2].image}
+                    alt={featuredProjects[2].name}
+                    width={352}
+                    height={198}
+                    className="object-cover rounded-lg shadow-md"
+                  />
+                  <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+                    {featuredProjects[2].name}
+                  </h2>
+                </div>
               </Link>
             </div>
             <div className="w-1/2 relative">
@@ -63,13 +78,18 @@ export function FeaturedProjects() {
                 href={featuredProjects[3].detailsLink}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
-                <Image
-                  src={featuredProjects[3].image}
-                  alt={featuredProjects[3].name}
-                  width={352}
-                  height={198}
-                  className="object-cover rounded-lg shadow-md"
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src={featuredProjects[3].image}
+                    alt={featuredProjects[3].name}
+                    width={352}
+                    height={198}
+                    className="object-cover rounded-lg shadow-md"
+                  />
+                  <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+                    {featuredProjects[3].name}
+                  </h2>
+                </div>
               </Link>
             </div>
           </div>
