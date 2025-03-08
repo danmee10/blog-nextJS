@@ -10,7 +10,7 @@ import { TagSelect } from "../lib/components/TagSelect";
 import { Tag } from "../data/tags";
 
 export default function BlogPage() {
-  const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.STANDARD);
+  const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 

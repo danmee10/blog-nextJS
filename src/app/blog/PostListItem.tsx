@@ -36,10 +36,6 @@ export const PostListItem = ({ post, viewMode }: PostListItemProps) => {
           <p className="text-gray-600">{post.subHeading}</p>
         )}
 
-        {viewMode === ListViewMode.STANDARD && (
-          <p className="text-gray-600">{post.heading}</p>
-        )}
-
         <div className="flex flex-wrap gap-2 mt-2">
           {post.tags.map((tag) => (
             <span

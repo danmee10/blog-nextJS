@@ -1,4 +1,4 @@
-import { AlignJustify, Grid, List } from "lucide-react";
+import { AlignJustify, Grid } from "lucide-react";
 import { Button } from "./Button";
 import { ListViewMode } from "../types/ListViewMode";
 
@@ -17,19 +17,13 @@ export const ListViewModeSelect = ({
         variant={viewMode === ListViewMode.VERBOSE ? "default" : "outline"}
         onClick={() => setViewMode(ListViewMode.VERBOSE)}
       >
-        <AlignJustify size={18} />
-      </Button>
-      <Button
-        variant={viewMode === ListViewMode.STANDARD ? "default" : "outline"}
-        onClick={() => setViewMode(ListViewMode.STANDARD)}
-      >
         <Grid size={18} />
       </Button>
       <Button
         variant={viewMode === ListViewMode.CONDENSED ? "default" : "outline"}
         onClick={() => setViewMode(ListViewMode.CONDENSED)}
       >
-        <List size={18} />
+        <AlignJustify size={18} />
       </Button>
     </div>
   );
