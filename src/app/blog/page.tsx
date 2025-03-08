@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { blogPosts } from "../data/blogPosts";
-import SearchBar from "../lib/components/SearchBar";
+import { SearchBar } from "../lib/components/SearchBar";
 import { ListViewMode } from "../lib/types/ListViewMode";
 import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { PostListItem } from "./PostListItem";
