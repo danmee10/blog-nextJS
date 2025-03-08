@@ -2,27 +2,27 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp, X } from "lucide-react";
+import { tagCategories, Tag } from "../../data/tags";
 
-const tagCategories = {
-  "Frontend": ["JavaScript", "React", "Next.js", "TypeScript", "Web Development"],
-  "Backend": ["Node.js", "GraphQL", "REST", "APIs", "Serverless"],
-  "Cloud & DevOps": ["AWS", "Cloud Computing", "CI/CD", "DevOps", "Docker", "Containers"],
-  "Software Engineering": ["Design Patterns", "Best Practices", "Clean Code", "Software Development"],
-  "Performance & ML": ["Event Loop", "Asynchronous Programming", "Performance Optimization", "Machine Learning", "TensorFlow.js", "Static Site Generation"]
-};
+interface TagSelectProps {
+  selectedTags: Tag[];
+  setSelectedTags: React.Dispatch<React.SetStateAction<Tag[]>>;
+}
 
-export const TagSelect = ({ selectedTags, setSelectedTags }) => {
+export const TagSelect = ({
+  selectedTags,
+  setSelectedTags,
+}: TagSelectProps) => {
   const [expanded, setExpanded] = useState(false);
 
-  const toggleTag = (tag) => {
-    setSelectedTags((prev) =>
+  const toggleTag = (tag: Tag) => {
+    setSelectedTags((prev: Tag[]) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
   return (
     <div className="w-full border-b border-gray-300 pb-2 mb-4">
-      {/* Toggle Button */}
       <button
         className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-1"
         onClick={() => setExpanded(!expanded)}
@@ -34,7 +34,10 @@ export const TagSelect = ({ selectedTags, setSelectedTags }) => {
       {!expanded && selectedTags.length > 0 && (
         <div className="inline-flex flex-wrap gap-2 text-sm ml-2">
           {selectedTags.map((tag) => (
-            <span key={tag} className="flex items-center bg-gray-200 text-gray-700 px-2 py-0.5 rounded-md">
+            <span
+              key={tag}
+              className="flex items-center bg-gray-200 text-gray-700 px-2 py-0.5 rounded-md"
+            >
               {tag}
               <button className="ml-1" onClick={() => toggleTag(tag)}>
                 <X size={12} />

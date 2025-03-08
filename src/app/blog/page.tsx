@@ -7,10 +7,11 @@ import { ListViewMode } from "../lib/types/ListViewMode";
 import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { PostListItem } from "./PostListItem";
 import { TagSelect } from "../lib/components/TagSelect";
+import { Tag } from "../data/tags";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.STANDARD);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
   console.log({ selectedTags });
