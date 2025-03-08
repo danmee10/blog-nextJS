@@ -6,6 +6,7 @@ import { blogPosts } from "../data/blogPosts";
 import Link from "next/link";
 import SearchBar from "../lib/components/SearchBar";
 import { ListViewMode } from "../lib/types/ListViewMode";
+import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.STANDARD);
@@ -20,12 +21,15 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 bg-gray-50">
-      <SearchBar
-        search={search}
-        setSearch={setSearch}
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-      />
+      <div className="flex justify-between items-center mb-4">
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+        />
+        <ListViewModeSelect viewMode={viewMode} setViewMode={setViewMode} />
+      </div>
 
       <div className="space-y-4">
         {filteredPosts.map((post) => (
