@@ -14,7 +14,7 @@ export function FeaturedProjects() {
       <div className="w-full h-auto flex gap-4">
         <div className="w-1/2 h-[450px] relative">
           <Link
-            href={featuredProjects[0].detailsLink}
+            href={`/projects/${featuredProjects[0].slug}`}
             className="text-lg font-medium text-blue-600 hover:underline"
           >
             <div className="relative w-full h-full">
@@ -35,7 +35,7 @@ export function FeaturedProjects() {
         <div className="w-1/2 flex flex-col gap-4">
           <div className="w-full h-1/2 relative">
             <Link
-              href={featuredProjects[1].detailsLink}
+              href={`/projects/${featuredProjects[1].slug}`}
               className="text-lg font-medium text-blue-600 hover:underline"
             >
               <div className="relative w-full h-full">
@@ -56,7 +56,7 @@ export function FeaturedProjects() {
           <div className="w-full h-1/2 flex gap-4">
             <div className="w-1/2 relative">
               <Link
-                href={featuredProjects[2].detailsLink}
+                href={`/projects/${featuredProjects[2].slug}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 <div className="relative w-full h-full">
@@ -75,7 +75,7 @@ export function FeaturedProjects() {
             </div>
             <div className="w-1/2 relative">
               <Link
-                href={featuredProjects[3].detailsLink}
+                href={`/projects/${featuredProjects[3].slug}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 <div className="relative w-full h-full">

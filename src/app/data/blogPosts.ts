@@ -1,13 +1,6 @@
-export interface BlogPost {
-  id: number;
-  name: string;
-  description: string;
-  slug: string;
-  image: string;
-  tags: string[];
-}
+import { Item } from "../lib/types/Item";
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: Item[] = [
   {
     id: 1,
     name: "Exploring the Future of Full-Stack JavaScript",
