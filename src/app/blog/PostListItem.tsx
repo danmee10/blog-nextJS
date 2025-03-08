@@ -4,6 +4,7 @@ import { ListViewMode } from "../lib/types/ListViewMode";
 import { BlogPost } from "../data/blogPosts";
 import Image from "next/image";
 import { TagDisplay } from "../TagDisplay";
+import { useState } from "react";
 
 interface PostListItemProps {
   post: BlogPost;
@@ -11,17 +12,22 @@ interface PostListItemProps {
 }
 
 export const PostListItem = ({ post, viewMode }: PostListItemProps) => {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <Card className="p-4 relative">
       <Link key={post.id} href={`/blog/${post.name}`}>
-        {viewMode === ListViewMode.VERBOSE && post.image && (
+        {viewMode === ListViewMode.VERBOSE && (
           <div className="relative mb-4">
             <Image
-              src={post.image}
+              src={
+                imageError || !post.image ? "/fallback-image.jpg" : post.image
+              }
               alt={post.heading}
               className="w-full h-48 object-cover rounded-md"
               width={200}
               height={120}
+              onError={() => setImageError(true)}
             />
             <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
               {post.heading}
