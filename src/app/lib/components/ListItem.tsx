@@ -9,6 +9,7 @@ export interface Item {
   id: number | string;
   heading: string;
   subHeading: string;
+  name: string;
   tags: string[];
   image: string;
 }
