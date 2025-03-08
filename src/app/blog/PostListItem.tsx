@@ -3,6 +3,7 @@ import { Card } from "../lib/components/Card";
 import { ListViewMode } from "../lib/types/ListViewMode";
 import { BlogPost } from "../data/blogPosts";
 import Image from "next/image";
+import { TagDisplay } from "../TagDisplay";
 
 interface PostListItemProps {
   post: BlogPost;
@@ -37,14 +38,7 @@ export const PostListItem = ({ post, viewMode }: PostListItemProps) => {
         )}
 
         <div className="flex flex-wrap gap-2 mt-2">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs bg-gray-100 text-gray-900 px-2 py-1 rounded-md"
-            >
-              {tag}
-            </span>
-          ))}
+          <TagDisplay tags={post.tags} />
         </div>
       </Link>
     </Card>

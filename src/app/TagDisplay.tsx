@@ -4,11 +4,11 @@ interface TagDisplayProps {
 
 export function TagDisplay({ tags }: TagDisplayProps) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 mt-2">
       {tags.map((tag) => (
         <span
           key={tag}
-          className="text-xs font-medium text-gray-900 px-2.5 py-1 rounded-md bg-gray-100"
+          className="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full hover:bg-blue-200 transition-all duration-300 ease-in-out"
         >
           {tag}
         </span>
