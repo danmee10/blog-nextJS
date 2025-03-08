@@ -20,14 +20,14 @@ export function FeaturedBlogPosts() {
         Blog Posts
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {featuredBlogPosts.map(({ name, image }) => {
+        {featuredBlogPosts.map(({ name, image, slug }) => {
           return (
             <div
               key={name}
               className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
             >
               <Link
-                href={`/blog/${name}`}
+                href={`/blog-posts/${slug}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
                 <Image
