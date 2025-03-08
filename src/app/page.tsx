@@ -10,7 +10,7 @@ export default function Home() {
           <FeaturedProjects />
         </section>
 
-        <section className="w-full px-8 sm:px-20">
+        <section className="w-full px-6 sm:px-12">
           <FeaturedBlogPosts />
         </section>
       </main>
