@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "./data/blogPosts";
-import { TagDisplay } from "./TagDisplay";
 import fs from "fs";
 import path from "path";
 
