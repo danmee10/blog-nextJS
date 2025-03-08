@@ -20,7 +20,7 @@ export function FeaturedBlogPosts() {
         Blog Posts
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {featuredBlogPosts.map(({ name, heading, image }) => {
+        {featuredBlogPosts.map(({ name, image }) => {
           return (
             <div
               key={name}
@@ -32,7 +32,7 @@ export function FeaturedBlogPosts() {
               >
                 <Image
                   src={image}
-                  alt={heading}
+                  alt={name}
                   width={200}
                   height={120}
                   className="rounded-md mb-3"
@@ -42,7 +42,7 @@ export function FeaturedBlogPosts() {
                 href={`/blog/${name}`}
                 className="text-lg font-medium text-blue-600 hover:underline"
               >
-                {heading}
+                {name}
               </Link>
             </div>
           );

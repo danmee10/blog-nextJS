@@ -7,13 +7,14 @@ import { projects } from "../data/projects";
 import { SearchBar } from "../lib/components/SearchBar";
 import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { TagSelect } from "../lib/components/TagSelect";
+import { ListItem } from "../lib/components/ListItem";
 
 export default function ProjectsPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  const filteredPosts = projects.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     const matchesSearchTerm =
       project.name.toLowerCase().includes(search.toLowerCase()) ||
       project.description.toLowerCase().includes(search.toLowerCase()) ||
@@ -53,8 +54,8 @@ export default function ProjectsPage() {
             : "space-y-4"
         }`}
       >
-        {filteredPosts.map((post) => (
-          <ListItem key={post.id} post={post} viewMode={viewMode} />
+        {filteredProjects.map((project) => (
+          <ListItem key={project.id} item={project} viewMode={viewMode} />
         ))}
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { Tag } from "./tags";
 
 export interface Project {
+  id: number;
   name: string;
   description: string;
   image: string;
@@ -10,8 +11,9 @@ export interface Project {
   tags: Tag[];
 }
 
-export const projects = [
+export const projects: Project[] = [
   {
+    id: 1,
     name: "Personal Blog / Portfolio Website",
     description:
       "A personal blog and portfolio website built with Next.js and Tailwind CSS.",
@@ -22,6 +24,7 @@ export const projects = [
     tags: [Tag.NEXT_JS, Tag.TAILWIND_CSS, Tag.WEB_DEVELOPMENT],
   },
   {
+    id: 2,
     name: "Code Visualizer",
     description:
       "A tool that creates visualizations of complicated code paths to help developers understand their code better.",
@@ -31,6 +34,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT, Tag.TOOLS],
   },
   {
+    id: 3,
     name: "JS ORM Sandbox",
     description:
       "A VSCode plugin that allows a dev to interact with their development DB using the DSL of their given ORM.",
@@ -40,6 +44,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.DEVTOOLS],
   },
   {
+    id: 4,
     name: "Real-Time Data Visualization Dashboard",
     description:
       "A dynamic dashboard that visualizes real-time data using WebSockets and D3.js.",
@@ -50,6 +55,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.D3_JS, Tag.WEBSOCKETS],
   },
   {
+    id: 5,
     name: "AI-Powered Sentiment Analysis Tool",
     description:
       "An app that analyzes text sentiment using machine learning models to provide insights.",
@@ -60,6 +66,7 @@ export const projects = [
     tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.PYTHON],
   },
   {
+    id: 6,
     name: "Personal Finance Tracker",
     description:
       "An application to track your expenses, create budgets, and visualize spending habits.",
@@ -70,6 +77,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FINTECH],
   },
   {
+    id: 7,
     name: "E-Commerce Platform with Custom CMS",
     description:
       "A fully functional e-commerce platform with an integrated content management system (CMS).",
@@ -80,6 +88,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.ECOMMERCE],
   },
   {
+    id: 8,
     name: "Task Management App with Real-Time Collaboration",
     description:
       "A task management application that allows users to collaborate in real time on projects and tasks.",
@@ -90,6 +99,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.COLLABORATION],
   },
   {
+    id: 9,
     name: "Weather Forecasting App",
     description:
       "A weather app that provides up-to-date weather forecasts and alerts based on user location.",
@@ -100,6 +110,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.WEATHER],
   },
   {
+    id: 10,
     name: "Chatbot with Natural Language Processing",
     description:
       "A chatbot application powered by NLP to provide conversational support for various topics.",
@@ -110,6 +121,7 @@ export const projects = [
     tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.CHATBOT],
   },
   {
+    id: 11,
     name: "Photo Editing Web App",
     description:
       "A web-based photo editor with basic tools for cropping, resizing, and adding filters.",
@@ -120,6 +132,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.PHOTO_EDITING],
   },
   {
+    id: 12,
     name: "Real-Time Messaging Platform",
     description:
       "A real-time messaging app with support for text, images, and video chat.",
@@ -130,6 +143,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.REAL_TIME],
   },
   {
+    id: 13,
     name: "Travel Planning App",
     description:
       "An app that helps users plan and organize their trips with itinerary tracking and flight/hotel bookings.",
@@ -140,6 +154,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.TRAVEL],
   },
   {
+    id: 14,
     name: "Fitness Tracking App",
     description:
       "An app that tracks physical activities, workouts, and provides progress insights.",
@@ -150,6 +165,7 @@ export const projects = [
     tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FITNESS],
   },
   {
+    id: 15,
     name: "Automated Content Curation System",
     description:
       "A system that uses machine learning to curate relevant content from various sources for your blog.",

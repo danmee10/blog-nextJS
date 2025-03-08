@@ -16,8 +16,8 @@ export default function BlogPage() {
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearchTerm =
-      post.heading.toLowerCase().includes(search.toLowerCase()) ||
-      post.subHeading.toLowerCase().includes(search.toLowerCase()) ||
+      post.name.toLowerCase().includes(search.toLowerCase()) ||
+      post.description.toLowerCase().includes(search.toLowerCase()) ||
       post.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()));
 
     const matchesSelectedTags =

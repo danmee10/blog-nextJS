@@ -14,7 +14,7 @@ export default async function BlogPostPage({ params: asyncParams }: BlogPostPage
   const params = await asyncParams;
   const { postName } = params;
   const blogPostData: BlogPost | undefined = blogPosts.find(
-    (post) => post.name === postName
+    (post) => post.slug === postName
   );
 
   const blogPost: PostData | null = await getPostsDataByName(postName);
@@ -27,7 +27,7 @@ export default async function BlogPostPage({ params: asyncParams }: BlogPostPage
     <div className="max-w-4xl mx-auto p-4">
       <Image
         src={blogPostData.image}
-        alt={blogPostData.heading}
+        alt={blogPostData.name}
         width={800}
         height={400}
         className="rounded-md mb-4 object-cover"
