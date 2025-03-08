@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { Card } from "../lib/components/Card";
 import { ListViewMode } from "../lib/types/ListViewMode";
 import { BlogPost } from "../data/blogPosts";
