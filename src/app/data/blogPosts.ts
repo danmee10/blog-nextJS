@@ -1,5 +1,6 @@
 import { ItemBucket } from "../lib/constants/ItemBucket";
 import { Item } from "../lib/types/Item";
+import { Tag } from "./tags";
 
 export const blogPosts: Item[] = [
   {
@@ -9,7 +10,7 @@ export const blogPosts: Item[] = [
       "A deep dive into the evolving landscape of JavaScript development",
     image: "/blog-posts/full-stack-javascript-future.jpg",
     slug: "full-stack-javascript-future",
-    tags: ["JavaScript", "Full-Stack", "Web Development"],
+    tags: [Tag.JAVASCRIPT, Tag.FULL_STACK, Tag.WEB_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -18,7 +19,7 @@ export const blogPosts: Item[] = [
     description: "How to take your React development skills to the next level",
     image: "/blog-posts/mastering-react.jpg",
     slug: "mastering-react",
-    tags: ["React", "JavaScript", "Web Development"],
+    tags: [Tag.REACT, Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -28,7 +29,7 @@ export const blogPosts: Item[] = [
       "A guide to deploying scalable applications with AWS serverless technologies",
     image: "/blog-posts/serverless-aws.jpg",
     slug: "serverless-aws",
-    tags: ["Serverless", "AWS", "Cloud Computing"],
+    tags: [Tag.SERVERLESS, Tag.AWS, Tag.CLOUD_COMPUTING],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -37,7 +38,7 @@ export const blogPosts: Item[] = [
     description: "Improving your codebase with proven design patterns",
     image: "/blog-posts/js-design-patterns.jpg",
     slug: "js-design-patterns",
-    tags: ["JavaScript", "Design Patterns", "Best Practices"],
+    tags: [Tag.JAVASCRIPT, Tag.DESIGN_PATTERNS, Tag.BEST_PRACTICES],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -47,7 +48,7 @@ export const blogPosts: Item[] = [
       "A comparison of GraphQL and REST and which one suits your project better.",
     image: "/blog-posts/graphql-vs-rest.jpg",
     slug: "graphql-vs-rest",
-    tags: ["GraphQL", "REST", "APIs"],
+    tags: [Tag.GRAPHQL, Tag.REST, Tag.APIS],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -57,7 +58,7 @@ export const blogPosts: Item[] = [
       "How to integrate TypeScript into your Node.js application for type safety.",
     image: "/blog-posts/starting-with-typescript-node.jpg",
     slug: "starting-with-typescript-node",
-    tags: ["TypeScript", "Node.js", "JavaScript"],
+    tags: [Tag.TYPESCRIPT, Tag.NODE_JS, Tag.JAVASCRIPT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -67,7 +68,7 @@ export const blogPosts: Item[] = [
       "A beginner’s guide to understanding asynchronous programming in JavaScript.",
     image: "/blog-posts/javascript-event-loop.png",
     slug: "javascript-event-loop",
-    tags: ["JavaScript", "Event Loop", "Asynchronous Programming"],
+    tags: [Tag.JAVASCRIPT, Tag.EVENT_LOOP, Tag.ASYNCHRONOUS_PROGRAMMING],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -77,7 +78,7 @@ export const blogPosts: Item[] = [
       "Strategies and techniques to write clean, readable, and maintainable code.",
     image: "/blog-posts/clean-code-best-practices.jpg",
     slug: "clean-code-best-practices",
-    tags: ["Best Practices", "Clean Code", "Software Development"],
+    tags: [Tag.BEST_PRACTICES, Tag.CLEAN_CODE, Tag.SOFTWARE_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -87,7 +88,7 @@ export const blogPosts: Item[] = [
       "How CI/CD pipelines work and why they’re crucial for modern software development.",
     image: "/blog-posts/ci-cd-explained.jpg",
     slug: "ci-cd-explained",
-    tags: ["CI/CD", "DevOps", "Software Development"],
+    tags: [Tag.CI_CD, Tag.DEVOPS, Tag.SOFTWARE_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -97,7 +98,7 @@ export const blogPosts: Item[] = [
       "Learn the basics of Docker and containers, and how they can simplify your development workflow.",
     image: "/blog-posts/docker-containers-guide.jpg",
     slug: "docker-containers-guide",
-    tags: ["Docker", "Containers", "DevOps"],
+    tags: [Tag.DOCKER, Tag.CONTAINERS, Tag.DEVOPS],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -107,7 +108,7 @@ export const blogPosts: Item[] = [
       "An introduction to machine learning concepts and how to implement them using TensorFlow.js.",
     image: "/blog-posts/machine-learning-tensorflowjs.jpg",
     slug: "machine-learning-tensorflowjs",
-    tags: ["Machine Learning", "TensorFlow.js", "JavaScript"],
+    tags: [Tag.MACHINE_LEARNING, Tag.TENSORFLOW_JS, Tag.JAVASCRIPT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -117,7 +118,7 @@ export const blogPosts: Item[] = [
       "Techniques and best practices to improve the performance of your React applications.",
     image: "/blog-posts/react-performance-optimization.jpg",
     slug: "react-performance-optimization",
-    tags: ["React", "Performance Optimization", "JavaScript"],
+    tags: [Tag.REACT, Tag.PERFORMANCE_OPTIMIZATION, Tag.JAVASCRIPT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
@@ -127,7 +128,7 @@ export const blogPosts: Item[] = [
       "A step-by-step guide to building and deploying a static blog using Next.js and Vercel.",
     image: "/blog-posts/building-nextjs-blog.jpg",
     slug: "building-nextjs-blog",
-    tags: ["Next.js", "Static Site Generation", "Web Development"],
+    tags: [Tag.NEXT_JS, Tag.STATIC_SITE_GENERATION, Tag.WEB_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
 ];
