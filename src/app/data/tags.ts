@@ -1,23 +1,3 @@
-export enum TagCategory {
-  FRONTEND = "Frontend",
-  BACKEND = "Backend",
-  CLOUD_DEVOPS = "Cloud & DevOps",
-  SOFTWARE_ENGINEERING = "Software Engineering",
-  PERFORMANCE_ML = "Performance & ML",
-  TOOLS = "Tools",
-  FINTECH = "Fintech",
-  ECOMMERCE = "E-commerce",
-  COLLABORATION = "Collaboration",
-  WEATHER = "Weather",
-  CHATBOT = "Chatbot",
-  PHOTO_EDITING = "Photo Editing",
-  REAL_TIME = "Real-Time",
-  TRAVEL = "Travel",
-  FITNESS = "Fitness",
-  CONTENT_CURATION = "Content Curation",
-  BLOGGING = "Blogging",
-}
-
 export enum Tag {
   JAVASCRIPT = "JavaScript",
   REACT = "React",
@@ -65,6 +45,21 @@ export enum Tag {
   DEVTOOLS = "DevTools",
 }
 
+export enum TagCategory {
+  FRONTEND = "Frontend",
+  BACKEND = "Backend",
+  INFRASTRUCTURE_DEVOPS = "Infrastructure & DevOps",
+  SOFTWARE_ENGINEERING = "Software Engineering",
+  PERFORMANCE_AI = "Performance & AI",
+  TOOLS = "Tools",
+  AI_NLP = "AI & NLP",
+  INDUSTRY_APPLICATIONS = "Industry Applications",
+  WEATHER = "Weather",
+  TRAVEL = "Travel",
+  FITNESS = "Fitness",
+  BLOGGING = "Blogging",
+}
+
 export const tagCategories: Record<TagCategory, Tag[]> = {
   [TagCategory.FRONTEND]: [
     Tag.JAVASCRIPT,
@@ -73,6 +68,7 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.TYPESCRIPT,
     Tag.WEB_DEVELOPMENT,
     Tag.TAILWIND_CSS,
+    Tag.D3_JS,
   ],
   [TagCategory.BACKEND]: [
     Tag.NODE_JS,
@@ -80,8 +76,10 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.REST,
     Tag.APIS,
     Tag.SERVERLESS,
+    Tag.WEBSOCKETS,
+    Tag.PYTHON,
   ],
-  [TagCategory.CLOUD_DEVOPS]: [
+  [TagCategory.INFRASTRUCTURE_DEVOPS]: [
     Tag.AWS,
     Tag.CLOUD_COMPUTING,
     Tag.CI_CD,
@@ -95,7 +93,7 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.CLEAN_CODE,
     Tag.SOFTWARE_DEVELOPMENT,
   ],
-  [TagCategory.PERFORMANCE_ML]: [
+  [TagCategory.PERFORMANCE_AI]: [
     Tag.EVENT_LOOP,
     Tag.ASYNCHRONOUS_PROGRAMMING,
     Tag.PERFORMANCE_OPTIMIZATION,
@@ -103,22 +101,21 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.TENSORFLOW_JS,
     Tag.STATIC_SITE_GENERATION,
   ],
-  [TagCategory.TOOLS]: [Tag.TOOLS, Tag.DEVTOOLS],
-  [TagCategory.FINTECH]: [Tag.FINTECH],
-  [TagCategory.ECOMMERCE]: [Tag.ECOMMERCE],
-  [TagCategory.COLLABORATION]: [Tag.COLLABORATION],
+  [TagCategory.TOOLS]: [Tag.TOOLS, Tag.DEVTOOLS, Tag.PHOTO_EDITING],
+  [TagCategory.AI_NLP]: [Tag.NLP, Tag.CHATBOT],
+  [TagCategory.INDUSTRY_APPLICATIONS]: [
+    Tag.FINTECH,
+    Tag.ECOMMERCE,
+    Tag.COLLABORATION,
+  ],
   [TagCategory.WEATHER]: [Tag.WEATHER],
-  [TagCategory.CHATBOT]: [Tag.CHATBOT, Tag.NLP],
-  [TagCategory.PHOTO_EDITING]: [Tag.PHOTO_EDITING],
-  [TagCategory.REAL_TIME]: [Tag.REAL_TIME, Tag.WEBSOCKETS],
   [TagCategory.TRAVEL]: [Tag.TRAVEL],
   [TagCategory.FITNESS]: [Tag.FITNESS],
-  [TagCategory.CONTENT_CURATION]: [Tag.CONTENT_CURATION],
-  [TagCategory.BLOGGING]: [Tag.BLOGGING],
+  [TagCategory.BLOGGING]: [Tag.BLOGGING, Tag.CONTENT_CURATION],
 };
 
 export const tags = Object.entries(tagCategories).reduce((acc, [category, tags]) => {
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     acc[tag] = { name: tag, category: category as TagCategory };
   });
   return acc;
