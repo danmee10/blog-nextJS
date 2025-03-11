@@ -10,7 +10,7 @@ export const blogPosts: Item[] = [
       "A deep dive into the evolving landscape of JavaScript development",
     image: "/blog-posts/full-stack-javascript-future.jpg",
     slug: "full-stack-javascript-future",
-    tags: [Tag.JAVASCRIPT, Tag.FULL_STACK, Tag.WEB_DEVELOPMENT],
+    tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT],
     bucket: ItemBucket.BLOG_POST,
   },
   {
