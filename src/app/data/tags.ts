@@ -1,4 +1,5 @@
 export enum Tag {
+  TEST_DATA = "Test Data",
   JAVASCRIPT = "JavaScript",
   REACT = "React",
   NEXT_JS = "Next.js",
@@ -58,9 +59,10 @@ export enum TagCategory {
   TRAVEL = "Travel",
   FITNESS = "Fitness",
   BLOGGING = "Blogging",
+  MISC = "Misc",
 }
 
-export const tagCategories: Record<TagCategory, Tag[]> = {
+export const tagCategories: Partial<Record<TagCategory, Tag[]>> = {
   [TagCategory.FRONTEND]: [
     Tag.JAVASCRIPT,
     Tag.REACT,
@@ -108,9 +110,7 @@ export const tagCategories: Record<TagCategory, Tag[]> = {
     Tag.ECOMMERCE,
     Tag.COLLABORATION,
   ],
-  [TagCategory.WEATHER]: [Tag.WEATHER],
-  [TagCategory.TRAVEL]: [Tag.TRAVEL],
-  [TagCategory.FITNESS]: [Tag.FITNESS],
+  [TagCategory.MISC]: [Tag.WEATHER, Tag.TRAVEL, Tag.FITNESS, Tag.TEST_DATA],
   [TagCategory.BLOGGING]: [Tag.BLOGGING, Tag.CONTENT_CURATION],
 };
 

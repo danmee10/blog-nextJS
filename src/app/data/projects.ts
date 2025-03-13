@@ -12,7 +12,7 @@ export const projects: Project[] = [
     slug: "blog",
     demoLink: "https://sandboxDocs.com",
     sourceLinks: ["https://github.com/danmee10/blog-nextJS"],
-    tags: [Tag.NEXT_JS, Tag.TAILWIND_CSS, Tag.WEB_DEVELOPMENT],
+    tags: [Tag.NEXT_JS, Tag.TAILWIND_CSS, Tag.WEB_DEVELOPMENT, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     image: "/projects/code-visualizer.jpg",
     slug: "code-visualizer",
     sourceLinks: ["https://github.com/danmee10/code-visualizer"],
-    tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT, Tag.TOOLS],
+    tags: [Tag.JAVASCRIPT, Tag.WEB_DEVELOPMENT, Tag.TOOLS, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     image: "/projects/js-orm-sandbox.jpg",
     slug: "js-orm-sandbox",
     sourceLinks: ["https://github.com/danmee10/js-orm-sandbox"],
-    tags: [Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.DEVTOOLS],
+    tags: [Tag.JAVASCRIPT, Tag.TYPESCRIPT, Tag.DEVTOOLS, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     slug: "data-visualization-dashboard",
     demoLink: "https://data-dashboard-demo.com",
     sourceLinks: ["https://github.com/danmee10/data-visualization-dashboard"],
-    tags: [Tag.JAVASCRIPT, Tag.D3_JS, Tag.WEBSOCKETS],
+    tags: [Tag.JAVASCRIPT, Tag.D3_JS, Tag.WEBSOCKETS, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     slug: "sentiment-analysis-tool",
     demoLink: "https://sentiment-analysis-tool-demo.com",
     sourceLinks: ["https://github.com/danmee10/sentiment-analysis-tool"],
-    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.PYTHON],
+    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.PYTHON, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     slug: "personal-finance-tracker",
     demoLink: "https://finance-tracker-demo.com",
     sourceLinks: ["https://github.com/danmee10/personal-finance-tracker"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FINTECH],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FINTECH, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     slug: "e-commerce-platform",
     demoLink: "https://e-commerce-platform-demo.com",
     sourceLinks: ["https://github.com/danmee10/e-commerce-platform"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.ECOMMERCE],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.ECOMMERCE, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     slug: "task-management-app",
     demoLink: "https://task-management-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/task-management-app"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.COLLABORATION],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.COLLABORATION, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     slug: "weather-forecasting-app",
     demoLink: "https://weather-forecasting-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/weather-forecasting-app"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.WEATHER],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.WEATHER, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     slug: "chatbot-nlp",
     demoLink: "https://chatbot-nlp-demo.com",
     sourceLinks: ["https://github.com/danmee10/chatbot-nlp"],
-    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.CHATBOT],
+    tags: [Tag.MACHINE_LEARNING, Tag.NLP, Tag.CHATBOT, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     slug: "photo-editing-web-app",
     demoLink: "https://photo-editing-web-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/photo-editing-web-app"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.PHOTO_EDITING],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.PHOTO_EDITING, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     slug: "real-time-messaging-platform",
     demoLink: "https://real-time-messaging-demo.com",
     sourceLinks: ["https://github.com/danmee10/real-time-messaging-platform"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.REAL_TIME],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.REAL_TIME, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     slug: "travel-planning-app",
     demoLink: "https://travel-planning-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/travel-planning-app"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.TRAVEL],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.TRAVEL, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     slug: "fitness-tracking-app",
     demoLink: "https://fitness-tracking-app-demo.com",
     sourceLinks: ["https://github.com/danmee10/fitness-tracking-app"],
-    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FITNESS],
+    tags: [Tag.JAVASCRIPT, Tag.REACT, Tag.FITNESS, Tag.TEST_DATA],
     bucket: ItemBucket.PROJECTS,
   },
   {
@@ -178,7 +178,12 @@ export const projects: Project[] = [
     slug: "content-curation-system",
     demoLink: "https://content-curation-demo.com",
     sourceLinks: ["https://github.com/danmee10/content-curation-system"],
-    tags: [Tag.MACHINE_LEARNING, Tag.CONTENT_CURATION, Tag.BLOGGING],
+    tags: [
+      Tag.MACHINE_LEARNING,
+      Tag.CONTENT_CURATION,
+      Tag.BLOGGING,
+      Tag.TEST_DATA,
+    ],
     bucket: ItemBucket.PROJECTS,
   },
 ];

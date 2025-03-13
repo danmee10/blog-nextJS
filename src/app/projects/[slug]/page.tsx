@@ -21,7 +21,10 @@ export default async function ProjectPage({ params: asyncParams }: ProjectPagePr
     (post) => post.slug === slug
   );
 
-  const project: PostData | null = await getItemDataByName({name: slug, dir: projectsDirectory});
+  const project: PostData | null = await getItemDataByName({
+    name: slug,
+    dir: projectsDirectory,
+  });
 
   if (!project || !projectData) {
     return <NotFound objectType={NotFoundObject.PROJECT} />;
@@ -42,3 +45,4 @@ export default async function ProjectPage({ params: asyncParams }: ProjectPagePr
       />
     </div>
   );
+}
