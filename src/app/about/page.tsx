@@ -14,7 +14,7 @@ export default function AboutMePage() {
 
       <div className="mb-8">
         <h4 className="text-2xl font-semibold text-gray-800 mb-4">
-          What You'll Find Here
+          What You&apos;ll Find Here
         </h4>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
           <li>
@@ -35,7 +35,7 @@ export default function AboutMePage() {
       </div>
 
       <p className="text-lg text-gray-600">
-        Whether you're a fellow developer, a tech enthusiast, or someone
+        Whether you&apos;re a fellow developer, a tech enthusiast, or someone
         interested in web development, this site aims to offer both practical
         insights and inspiration for building high-quality, scalable
         applications.
