@@ -36,8 +36,7 @@ export default function ProjectsPage() {
           <SearchBar
             search={search}
             setSearch={setSearch}
-            viewMode={viewMode}
-            setViewMode={setViewMode}
+            placeholder={"Search projects..."}
           />
           <ListViewModeSelect viewMode={viewMode} setViewMode={setViewMode} />
         </div>

@@ -34,8 +34,7 @@ export default function BlogPage() {
           <SearchBar
             search={search}
             setSearch={setSearch}
-            viewMode={viewMode}
-            setViewMode={setViewMode}
+            placeholder={"Search posts..."}
           />
           <ListViewModeSelect viewMode={viewMode} setViewMode={setViewMode} />
         </div>
