@@ -13,9 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
       screens: {
-        sm: "500px", // Default Tailwind small
-        md: "768px", // Default Tailwind medium
-        lg: "900px", // Custom large breakpoint
+        sm: "500px",
+        md: "768px",
+        lg: "900px",
       },
     },
   },
