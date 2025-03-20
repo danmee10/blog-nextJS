@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Card } from "./Card";
 import { ListViewMode } from "../types/ListViewMode";
 import Image from "next/image";
-import { TagDisplay } from "../../TagDisplay";
+import { TagDisplay } from "./TagDisplay";
 import { useState } from "react";
 import { Item } from "../types/Item";
 
