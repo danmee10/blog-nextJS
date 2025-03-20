@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        sm: "500px", // Default Tailwind small
+        md: "768px", // Default Tailwind medium
+        lg: "900px", // Custom large breakpoint
+      },
     },
   },
   plugins: [],
