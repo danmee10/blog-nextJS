@@ -13,7 +13,7 @@ export default function NotFound({ objectType }: NotFoundProps) {
   const router = useRouter();
 
   return (
-    <div className="max-w-4xl mx-auto p-4 text-center">
+    <div className="max-w-4xl mx-auto pt-10 p-4 text-center">
       <h1 className="text-3xl font-bold mb-4">
         {capitalizeFirstLetter(objectType)} Not Found
       </h1>

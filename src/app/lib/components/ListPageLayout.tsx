@@ -6,7 +6,7 @@ export const ListPageLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 min-h-screen">
       <div className="mb-4">
         <Breadcrumbs />
       </div>
