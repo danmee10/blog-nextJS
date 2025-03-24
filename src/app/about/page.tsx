@@ -1,6 +1,6 @@
 export default function AboutMePage() {
   return (
-    <div className="h-full max-w-6xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+    <div className="min-h-screen max-w-6xl mx-auto p-8 bg-white shadow-lg rounded-lg">
       <h3 className="text-4xl font-semibold mb-6 border-b-4 border-gray-900 pb-3">
         About This Site
       </h3>
