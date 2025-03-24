@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4 bg-gray-900 text-white shadow-md">
       <div className="flex items-center">
@@ -29,4 +29,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
