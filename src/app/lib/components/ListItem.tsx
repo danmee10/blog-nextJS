@@ -29,7 +29,7 @@ export const ListItem = ({ item, viewMode }: ListItemProps) => {
               height={120}
               onError={() => setImageError(true)}
             />
-            <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+            <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md line-clamp-2">
               {item.name}
             </h2>
           </div>
