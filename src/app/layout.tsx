@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sandbox Docs",
     description:
-      "A collection of experiments using and investigations into web technologies.",
+      "A collection of experiments using different web technologies.",
     url: "https://sandboxdocs.com",
     siteName: "Sandbox Docs",
     images: [
