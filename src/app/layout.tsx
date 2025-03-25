@@ -15,8 +15,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SandboxDocs",
+  title: "Sandbox Docs",
   description: "Web development portfolio and blog",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Sandbox Docs",
+    description:
+      "A collection of experiments using different web technologies.",
+    url: "https://sandboxdocs.com",
+    siteName: "Sandbox Docs",
+    images: [
+      {
+        url: "/favicon-32x32.png",
+        width: 32,
+        height: 32,
+        alt: "A preview image for the blog",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
