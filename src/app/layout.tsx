@@ -18,9 +18,26 @@ export const metadata: Metadata = {
   title: "Sandbox Docs",
   description: "Web development portfolio and blog",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/icons/favicon.ico",
+    shortcut: "/icons/favicon-32x32.png",
+    apple: "/icons/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/icons/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        rel: "icon",
+        url: "/icons/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
   },
+  manifest: "/site.webmanifest",
+  themeColor: "#1f2937",
   openGraph: {
     title: "Sandbox Docs",
     description:
@@ -29,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Sandbox Docs",
     images: [
       {
-        url: "/favicon-32x32.png",
+        url: "/icons/favicon-32x32.png",
         width: 32,
         height: 32,
         alt: "A preview image for the blog",
