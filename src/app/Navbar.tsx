@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 export function Navbar() {
+  const linkClasses = "hover:text-gray-400 transition-colors";
   return (
     <nav className="flex justify-between items-center p-4 bg-gray-900 text-white shadow-md">
       <div className="flex items-center">
@@ -11,19 +12,13 @@ export function Navbar() {
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <Link
-          href="/blog-posts"
-          className="hover:text-gray-400 transition-colors"
-        >
+        <Link href="/blog-posts" className={linkClasses}>
           Blog
         </Link>
-        <Link
-          href="/projects"
-          className="hover:text-gray-400 transition-colors"
-        >
+        <Link href="/projects" className={linkClasses}>
           Projects
         </Link>
-        <Link href="/about" className="hover:text-gray-400 transition-colors">
+        <Link href="/about" className={linkClasses}>
           About
         </Link>
       </div>

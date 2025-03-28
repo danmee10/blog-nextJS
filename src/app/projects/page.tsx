@@ -8,25 +8,17 @@ import { SearchBar } from "../lib/components/SearchBar";
 import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { TagSelect } from "../lib/components/TagSelect";
 import { ListItem } from "../lib/components/ListItem";
+import { searchItems } from "../lib/utils/searchItems";
 
 export default function ProjectsPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  const filteredProjects = projects.filter((project) => {
-    const matchesSearchTerm =
-      project.name.toLowerCase().includes(search.toLowerCase()) ||
-      project.description.toLowerCase().includes(search.toLowerCase()) ||
-      project.tags.some((tag) =>
-        tag.toLowerCase().includes(search.toLowerCase())
-      );
-
-    const matchesSelectedTags =
-      selectedTags.length === 0 ||
-      selectedTags.every((tag) => project.tags.includes(tag));
-
-    return matchesSearchTerm && matchesSelectedTags;
+  const filteredProjects = searchItems({
+    items: projects,
+    search,
+    selectedTags,
   });
 
   return (

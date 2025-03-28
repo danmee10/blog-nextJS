@@ -8,24 +8,14 @@ import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { ListItem } from "../lib/components/ListItem";
 import { TagSelect } from "../lib/components/TagSelect";
 import { Tag } from "../data/tags";
+import { searchItems } from "../lib/utils/searchItems";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  const filteredPosts = blogPosts.filter((post) => {
-    const matchesSearchTerm =
-      post.name.toLowerCase().includes(search.toLowerCase()) ||
-      post.description.toLowerCase().includes(search.toLowerCase()) ||
-      post.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()));
-
-    const matchesSelectedTags =
-      selectedTags.length === 0 ||
-      selectedTags.every((tag) => post.tags.includes(tag));
-
-    return matchesSearchTerm && matchesSelectedTags;
-  });
+  const filteredPosts = searchItems({ items: blogPosts, search, selectedTags });
 
   return (
     <div className="max-w-4xl mx-auto p-4 bg-gray-50">

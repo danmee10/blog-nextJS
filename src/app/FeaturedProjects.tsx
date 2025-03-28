@@ -37,9 +37,7 @@ export function FeaturedProjects() {
           </Link>
         </div>
 
-        {/* Remaining Projects */}
         <div className="hidden w-1/2 flex-col gap-4 sm:flex">
-          {/* Second Project */}
           <div className="relative h-full w-full md:h-1/2">
             <Link
               href={`/projects/${featuredProjects[1].slug}`}
@@ -60,7 +58,6 @@ export function FeaturedProjects() {
             </Link>
           </div>
 
-          {/* Third and Fourth Projects */}
           <div className="hidden h-1/2 w-full gap-4 md:flex">
             {[2, 3].map((i) => (
               <div key={i} className="relative w-1/2">
