@@ -7,7 +7,6 @@ interface SearchItemsInput<T extends Searchable> {
   selectedTags: Tag[] | string[];
 }
 
-// Generic function that returns same type it receives
 export const searchItems = <T extends Searchable>({
   items,
   search,
