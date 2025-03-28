@@ -16,37 +16,35 @@ export function FeaturedBlogPosts() {
 
   return (
     <>
-      <h3 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">
+      <h3 className="mb-6 border-b-2 border-gray-300 pb-2 text-3xl font-bold">
         Blog Posts
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {featuredBlogPosts.map(({ name, image, slug }) => {
-          return (
-            <div
-              key={name}
-              className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 transition hover:shadow-xl"
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-3">
+        {featuredBlogPosts.map(({ name, image, slug }) => (
+          <div
+            key={name}
+            className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg transition hover:shadow-xl"
+          >
+            <Link
+              href={`/blog-posts/${slug}`}
+              className="hover:underline text-lg font-medium text-blue-600"
             >
-              <Link
-                href={`/blog-posts/${slug}`}
-                className="text-lg font-medium text-blue-600 hover:underline"
-              >
-                <Image
-                  src={image}
-                  alt={name}
-                  width={200}
-                  height={120}
-                  className="rounded-md mb-3"
-                />
-              </Link>
-              <Link
-                href={`/blog/${name}`}
-                className="text-lg font-medium text-blue-600 hover:underline"
-              >
-                {name}
-              </Link>
-            </div>
-          );
-        })}
+              <Image
+                src={image}
+                alt={name}
+                width={200}
+                height={120}
+                className="mb-3 rounded-md"
+              />
+            </Link>
+            <Link
+              href={`/blog/${name}`}
+              className="hover:underline text-lg font-medium text-blue-600"
+            >
+              {name}
+            </Link>
+          </div>
+        ))}
       </div>
     </>
   );

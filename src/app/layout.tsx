@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Sandbox Docs",
   description: "Web development portfolio and blog",
   icons: {
-    icon: "/icons/favicon.ico",
+    icon: "/favicon.ico",
     shortcut: "/icons/favicon-32x32.png",
     apple: "/icons/apple-touch-icon.png",
     other: [

@@ -5,93 +5,84 @@ import { projects } from "./data/projects";
 export function FeaturedProjects() {
   const featuredProjects = projects.sort(() => 0.5 - Math.random()).slice(0, 4);
 
+  const overlayTextClasses =
+    "absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md";
+  const imageWrapperClasses = "relative w-full h-full";
+  const imageClasses = "object-cover rounded-lg shadow-md";
+  const linkClasses = "text-lg font-medium text-blue-600 hover:underline";
+
   return (
-    <div className="max-w-6xl mx-auto">
-      <h3 className="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">
+    <div className="mx-auto max-w-6xl">
+      <h3 className="mb-6 border-b-2 border-gray-300 pb-2 text-3xl font-bold">
         Projects
       </h3>
 
-      <div className="w-full h-auto flex gap-4">
-        <div className="sm:w-1/2 w-full h-[450px] relative">
+      <div className="flex h-auto w-full gap-4">
+        {/* Primary Large Project */}
+        <div className="relative h-[450px] w-full sm:w-1/2">
           <Link
             href={`/projects/${featuredProjects[0].slug}`}
-            className="text-lg font-medium text-blue-600 hover:underline"
+            className={linkClasses}
           >
-            <div className="relative w-full h-full">
+            <div className={imageWrapperClasses}>
               <Image
                 src={featuredProjects[0].image}
                 alt={featuredProjects[0].name}
                 width={1408}
                 height={768}
-                className="object-cover rounded-lg shadow-md"
+                className={imageClasses}
               />
-              <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
-                {featuredProjects[0].name}
-              </h2>
+              <h2 className={overlayTextClasses}>{featuredProjects[0].name}</h2>
             </div>
           </Link>
         </div>
 
-        <div className="w-1/2 sm:flex hidden flex-col gap-4">
-          <div className="w-full md:h-1/2 h-full relative">
+        {/* Remaining Projects */}
+        <div className="hidden w-1/2 flex-col gap-4 sm:flex">
+          {/* Second Project */}
+          <div className="relative h-full w-full md:h-1/2">
             <Link
               href={`/projects/${featuredProjects[1].slug}`}
-              className="text-lg font-medium text-blue-600 hover:underline"
+              className={linkClasses}
             >
-              <div className="relative w-full h-full">
+              <div className={imageWrapperClasses}>
                 <Image
                   src={featuredProjects[1].image}
                   alt={featuredProjects[1].name}
                   width={704}
                   height={396}
-                  className="object-cover rounded-lg shadow-md"
+                  className={imageClasses}
                 />
-                <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
+                <h2 className={overlayTextClasses}>
                   {featuredProjects[1].name}
                 </h2>
               </div>
             </Link>
           </div>
 
-          <div className="w-full h-1/2 flex gap-4 md:flex hidden">
-            <div className="w-1/2 relative">
-              <Link
-                href={`/projects/${featuredProjects[2].slug}`}
-                className="text-lg font-medium text-blue-600 hover:underline"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={featuredProjects[2].image}
-                    alt={featuredProjects[2].name}
-                    width={352}
-                    height={198}
-                    className="object-cover rounded-lg shadow-md"
-                  />
-                  <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
-                    {featuredProjects[2].name}
-                  </h2>
-                </div>
-              </Link>
-            </div>
-            <div className="w-1/2 relative">
-              <Link
-                href={`/projects/${featuredProjects[3].slug}`}
-                className="text-lg font-medium text-blue-600 hover:underline"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={featuredProjects[3].image}
-                    alt={featuredProjects[3].name}
-                    width={352}
-                    height={198}
-                    className="object-cover rounded-lg shadow-md"
-                  />
-                  <h2 className="absolute bottom-4 left-4 text-white text-lg font-semibold bg-black bg-opacity-50 p-2 rounded-md">
-                    {featuredProjects[3].name}
-                  </h2>
-                </div>
-              </Link>
-            </div>
+          {/* Third and Fourth Projects */}
+          <div className="hidden h-1/2 w-full gap-4 md:flex">
+            {[2, 3].map((i) => (
+              <div key={i} className="relative w-1/2">
+                <Link
+                  href={`/projects/${featuredProjects[i].slug}`}
+                  className={linkClasses}
+                >
+                  <div className={imageWrapperClasses}>
+                    <Image
+                      src={featuredProjects[i].image}
+                      alt={featuredProjects[i].name}
+                      width={352}
+                      height={198}
+                      className={imageClasses}
+                    />
+                    <h2 className={overlayTextClasses}>
+                      {featuredProjects[i].name}
+                    </h2>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>
