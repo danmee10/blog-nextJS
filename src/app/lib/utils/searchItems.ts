@@ -1,16 +1,18 @@
 import { Tag } from "@/app/data/tags";
-import { Item } from "../types/Item";
+import { Searchable } from "../types/Searchable";
 
-interface SearchItemsInput {
-  items: Item[];
+interface SearchItemsInput<T extends Searchable> {
+  items: T[];
   search: string;
-  selectedTags: Tag[];
+  selectedTags: Tag[] | string[];
 }
-export const searchItems = ({
+
+// Generic function that returns same type it receives
+export const searchItems = <T extends Searchable>({
   items,
   search,
   selectedTags,
-}: SearchItemsInput): Item[] => {
+}: SearchItemsInput<T>): T[] => {
   return items.filter((post) => {
     const matchesSearchTerm =
       post.name.toLowerCase().includes(search.toLowerCase()) ||

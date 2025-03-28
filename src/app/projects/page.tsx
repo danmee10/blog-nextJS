@@ -9,13 +9,14 @@ import { ListViewModeSelect } from "../lib/components/ListViewModeSelect";
 import { TagSelect } from "../lib/components/TagSelect";
 import { ListItem } from "../lib/components/ListItem";
 import { searchItems } from "../lib/utils/searchItems";
+import { Project } from "../lib/types/Project";
 
 export default function ProjectsPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  const filteredProjects = searchItems({
+  const filteredProjects = searchItems<Project>({
     items: projects,
     search,
     selectedTags,

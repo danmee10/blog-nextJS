@@ -9,13 +9,18 @@ import { ListItem } from "../lib/components/ListItem";
 import { TagSelect } from "../lib/components/TagSelect";
 import { Tag } from "../data/tags";
 import { searchItems } from "../lib/utils/searchItems";
+import { Item } from "../lib/types/Item";
 
 export default function BlogPage() {
   const [viewMode, setViewMode] = useState<ListViewMode>(ListViewMode.VERBOSE);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [search, setSearch] = useState("");
 
-  const filteredPosts = searchItems({ items: blogPosts, search, selectedTags });
+  const filteredPosts = searchItems<Item>({
+    items: blogPosts,
+    search,
+    selectedTags,
+  });
 
   return (
     <div className="max-w-4xl mx-auto p-4 bg-gray-50">
