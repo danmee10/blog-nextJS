@@ -1,7 +1,17 @@
 module.exports = {
-  testEnvironment: 'node',
-  testMatch: ['**/*.test.ts'],
+  preset: "ts-jest/presets/default-esm",
+  testEnvironment: "node",
   transform: {
-    '^.+\\.ts$': 'ts-jest'
-  }
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        useESM: true,
+      },
+    ],
+  },
+  moduleNameMapper: {
+    // Map non-JS modules (if needed)
+  },
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
+  transformIgnorePatterns: ["/node_modules/(?!(remark|remark-html)/)"],
 };
