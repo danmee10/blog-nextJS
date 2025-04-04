@@ -1,49 +1,69 @@
 import fs from "fs";
-import { getItemDataByName } from "./getItemDataByName"; // Adjust the import path as needed
+import matter from "gray-matter";
+import { getItemDataByName } from "./getItemDataByName"; // adjust the import path as needed
 
-const mockedFs = fs as jest.Mocked<typeof fs>;
+// Mock the fs and gray-matter modules
+jest.mock("fs");
+jest.mock("gray-matter");
 
 describe("getItemDataByName", () => {
-  beforeEach(() => {
-    jest.resetAllMocks();
+  const dir = "/test-dir";
+  const name = "test-post";
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
-  it("should return PostData when the file exists", async () => {
-    const fakeMarkdown = `---
-title: "Test Post"
+  it("should return post data when file exists and content is valid markdown", async () => {
+    // Arrange: sample markdown file with front matter and content
+    const fileContent = `---
+title: Test Post
 ---
-# Hello World`;
+This is test content.`;
 
-    mockedFs.readFileSync.mockImplementation(() => fakeMarkdown);
+    // Simulate fs.readFileSync returning the file content
+    (fs.readFileSync as jest.Mock).mockReturnValue(fileContent);
+    // Simulate gray-matter returning an object with the markdown content
+    (matter as unknown as jest.Mock).mockReturnValue({
+      content: "This is test content.",
+    });
 
-    const result = await getItemDataByName({ name: "test", dir: "/fakeDir" });
+    // Act: call the function under test
+    const result = await getItemDataByName({ name, dir });
+
+    // Assert: verify the result contains the expected properties and HTML conversion
     expect(result).not.toBeNull();
-    expect(result?.name).toBe("test");
-    expect(result?.contentHtml).toMatch(/<h1.*?>Hello World<\/h1>/);
+    expect(result?.name).toBe(name);
+    // remark-html wraps plain text in a paragraph tag; so we check that
+    expect(result?.contentHtml).toContain("<p>This is test content.</p>");
   });
 
-  it("should return null when the file is not found (ENOENT)", async () => {
-    const error: NodeJS.ErrnoException = new Error("File not found");
+  it("should return null if file is not found (ENOENT error)", async () => {
+    // Arrange: simulate a file not found error
+    const error = new Error("File not found") as NodeJS.ErrnoException;
     error.code = "ENOENT";
-
-    mockedFs.readFileSync.mockImplementation(() => {
+    (fs.readFileSync as jest.Mock).mockImplementation(() => {
       throw error;
     });
 
-    const result = await getItemDataByName({ name: "notfound", dir: "/fakeDir" });
+    // Act: call the function under test
+    const result = await getItemDataByName({ name, dir });
+
+    // Assert: function returns null when file is missing
     expect(result).toBeNull();
   });
 
-  it("should rethrow error for errors other than ENOENT", async () => {
-    const error: NodeJS.ErrnoException = new Error("Permission denied");
-    error.code = "EACCES";
-
-    mockedFs.readFileSync.mockImplementation(() => {
+  it("should throw error for non ENOENT errors", async () => {
+    // Arrange: simulate an error with a different code
+    const error = new Error("Unexpected error") as NodeJS.ErrnoException;
+    error.code = "EOTHER";
+    (fs.readFileSync as jest.Mock).mockImplementation(() => {
       throw error;
     });
 
-    await expect(
-      getItemDataByName({ name: "test", dir: "/fakeDir" })
-    ).rejects.toThrow("Permission denied");
+    // Act & Assert: the function should reject with the thrown error
+    await expect(getItemDataByName({ name, dir })).rejects.toThrow(
+      "Unexpected error"
+    );
   });
 });
