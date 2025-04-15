@@ -2,11 +2,11 @@ export function mergeClasses(
   ...classes: (string | Record<string, boolean> | undefined)[]
 ) {
   return classes
-    .flatMap((cls) =>
-      typeof cls === "string"
-        ? cls
-        : typeof cls === "object" && cls !== null
-        ? Object.keys(cls).filter((key) => cls[key])
+    .flatMap((klass) =>
+      typeof klass === "string"
+        ? klass
+        : typeof klass === "object" && klass !== null
+        ? Object.keys(klass).filter((key) => klass[key])
         : []
     )
     .join(" ");
