@@ -1,4 +1,6 @@
-export function cn(...classes: (string | Record<string, boolean> | undefined)[]) {
+export function mergeClasses(
+  ...classes: (string | Record<string, boolean> | undefined)[]
+) {
   return classes
     .flatMap((cls) =>
       typeof cls === "string"
