@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { Searchable } from "../types/Searchable";
 import { searchItems } from "./searchItems";
 
